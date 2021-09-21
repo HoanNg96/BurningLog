@@ -1,0 +1,28 @@
+& when (@media-common = true) {
+    .style-guide-title {
+        color: @color-gray-darken0;
+    }
+    .action.third-btn {
+        .lib-button(
+            @_button-color: @color-black-dark1,
+            @_button-background: @color-white,
+            @_button-line-height: 22px,
+            @_button-width: 140px,
+            @_button-border: 2px solid @color-black-dark1,
+
+            @_button-color-hover: @color-white,
+            @_button-background-hover: @color-black-dark1,
+            @_button-border-hover: 2px solid @color-black-dark1,
+            @_button-color-active: @color-white,
+            @_button-background-active: @color-black-dark1,
+            @_button-border-active: 2px solid @color-black-dark1,
+        );
+    }
+    .action.primary.hover {
+        background-color: @color-green2;
+    }
+    .action.third-btn.hover {
+        background-color: @color-black-dark1;
+        color: @color-white;
+    }
+}
