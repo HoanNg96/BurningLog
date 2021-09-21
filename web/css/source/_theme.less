@@ -1,6 +1,8 @@
 & when (@media-common = true) {
     .style-guide-title {
         color: @color-gray-darken0;
+        .lib-css(font-family, @font-family__HelveticalLight);
+        .lib-css(font-size, 30px);
     }
     .action.third-btn {
         .lib-button(
@@ -24,5 +26,8 @@
     .action.third-btn.hover {
         background-color: @color-black-dark1;
         color: @color-white;
+    }
+    .style-guide {
+        
     }
 }

@@ -1,0 +1,64 @@
+//create cms page name Style Guide with url key "style-guide" and copy this page to content page
+<div class="row">
+<div class="col">
+<div>
+<p class="style-guide-title">Buttons</p>
+<div><button class="action primary"> ADD TO CART </button> <button class="action third-btn"> STANDARD </button> <input class="input-text qty" title="Qty" name="qty" type="number"></div>
+<div><button class="action primary hover"> ADD TO CART </button> <button class="action third-btn hover"> STANDARD </button> <input class="input-text qty" title="Qty" name="qty" type="number"></div>
+</div>
+<div>
+<p class="style-guide-title">Checkboxes &amp; Radio buttons</p>
+<div><input id="" class="checkbox" checked="checked" name="" type="checkbox"> <input id="" class="radio" checked="checked" name="" type="radio"></div>
+<div><input id="" class="checkbox" name="" type="checkbox"> <input id="" class="radio" name="" type="radio"></div>
+<div><input id="" class="checkbox" checked="checked" disabled="disabled" name="" type="checkbox"> <input id="" class="radio" checked="checked" disabled="disabled" name="" type="radio"></div>
+<div><input id="" class="checkbox" disabled="disabled" name="" type="checkbox"> <input id="" class="radio" disabled="disabled" name="" type="radio"></div>
+</div>
+<div>
+<p class="style-guide-title">Input Fields</p>
+<div>
+<div class="actions dropdown example-dropdown-1"><button class="action toggle" data-mage-init="{" data-toggle="dropdown" aria-haspopup="true"> button + dropdown </button>
+<ul class="dropdown">
+<li><span class="item">One</span></li>
+<li><span class="item">Two</span></li>
+<li><span class="item">Three</span></li>
+</ul>
+</div>
+</div>
+<div><input class="input-text" type="text"></div>
+<div><input class="input-text input-selected" type="text"></div>
+<div><input class="input-text mage-error" type="text"></div>
+</div>
+<div>
+<p id="style-guide-tabs" class="style-guide-title">Navigation</p>
+<div class="product data items">
+<div class="item title" data-role="collapsible"><a class="switch" href="#description" data-toggle="trigger">DESCRIPTION</a></div>
+<div id="description" class="item content" data-role="content">DESCRIPTION</div>
+<div class="item title" data-role="collapsible"><a class="switch" href="#specifications" data-toggle="trigger">SPECIFICATIONS</a></div>
+<div id="specifications" class="item content" data-role="content">SPECIFICATIONS</div>
+<div class="item title" data-role="collapsible"><a class="switch" href="#faq" data-toggle="trigger">FAQ</a></div>
+<div id="faq" class="item content" data-role="content">FAQ</div>
+</div>
+</div>
+</div>
+<div class="col">
+<div>
+<p class="style-guide-title">Alerts</p>
+<div class="error message">Product has been added to your shopping bag</div>
+<div class="success message">Invalid username or password</div>
+</div>
+<div>
+<p class="style-guide-title">Typography</p>
+Sample Typo <br><a href="#">Text link</a> <br><a href="#">Text link hover</a>
+<h1>h1 Lora Regular - 32px</h1>
+<h2>h2 Lora Regular - 24px</h2>
+<h3>h3 Lora Regular - 18px</h3>
+<h4>Roboto Bold - 15px</h4>
+</div>
+<div>
+<p class="style-guide-title">Misc</p>
+<div><a class="fas fa-times" href="#"><span class="label"> close</span> </a> <a class="fab fa-facebook-f" href="#"> <span class="label"> facebook</span> </a> <a class="fab fa-instagram" href="#"> <span class="label"> instagram</span> </a> <a class="fab fa-twitter" href="#"> <span class="label"> twitter</span> </a></div>
+<div><a class="fas fa-times" href="#"><span class="label"> close</span> </a> <a class="fab fa-facebook-f" href="#"> <span class="label"> facebook</span> </a> <a class="fab fa-instagram" href="#"> <span class="label"> instagram</span> </a> <a class="fab fa-twitter" href="#"> <span class="label"> twitter</span> </a></div>
+<div>{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}} {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}</div>
+</div>
+</div>
+</div>
