@@ -1,7 +1,19 @@
 & when (@media-common = true) {
+    .row.style-guide {
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .col {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
     .style-guide-title {
         .lib-css(color, @color-gray-darken0);
-        /* font-family: @font-family__HelveticalLight; */
+        .lib-css(font-family, "HelveticalLight-Regular");
         .lib-css(font-size, 30px);
     }
     .action.primary.hover {
@@ -49,6 +61,20 @@
         }
         input {
             .lib-css(vertical-align, bottom);
+        }
+    }
+}
+
+@media screen and (min-width: @screen__m) {
+    .row.style-guide {
+        .col {
+            .lib-css(width, 50%);
+            &:first-child {
+                .lib-css(padding-right, 25px);
+            }
+            &:last-child {
+                .lib-css(padding-left, 25px);
+            }
         }
     }
 }
