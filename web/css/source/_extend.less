@@ -1,0 +1,53 @@
+& when (@media-common = true) {
+    .style-guide-title {
+        .lib-css(color, @color-gray-darken0);
+        /* font-family: @font-family__HelveticalLight; */
+        .lib-css(font-size, 30px);
+    }
+    .action.primary.hover {
+        .lib-css(background-color, @color-green2);
+    }
+    .action.secondary.hover {
+        .lib-css(background-color, @color-black-dark1);
+        .lib-css(color, @color-white);
+    }
+    input[type="number"].qty {
+        .lib-css(width, 40px);
+        .lib-css(text-align-last, center);
+    }
+    span.ipn-step-up,
+    span.ipn-step-down {
+        .lib-css(display, inline-block);
+        .lib-css(vertical-align, bottom);
+        .lib-css(width, 38px);
+        .lib-css(height, 38px);
+        .lib-css(border, 1px solid @color-gray-middle1);
+        .lib-css(line-height, 38px);
+        .lib-css(text-align, center);
+        &:hover {
+            .lib-css(background-color, @color-white-fog);
+        }
+    }
+    span.ipn-step-up,
+    span.ipn-step-up:hover,
+    span.ipn-step-up:active {
+        .lib-css(border-left, none);
+        .lib-css(margin-left, -4px);
+    }
+    span.ipn-step-down,
+    span.ipn-step-down:hover,
+    span.ipn-step-down:active {
+        .lib-css(border-right, none);
+        .lib-css(margin-right, -4px);
+    }
+    .sg-btn,
+    .sg-btn-hover {
+        margin-bottom: 10px;
+        button.action {
+            margin-right: 6px;
+        }
+        input {
+            .lib-css(vertical-align, bottom);
+        }
+    }
+}

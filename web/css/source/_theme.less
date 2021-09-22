@@ -109,18 +109,31 @@
 //  ---------------------------------------------
 
 @button__font-weight: @font-weight__semibold;
+@button__border-radius: 0;
+@button__padding: 0 35px;
+@button__shadow: false;
+@button__shadow-active: false;
+@button__line-height: 36px;
 
 //  Default = secondary button
-@button__background: @color-gray-darken0;
-@button__border: 1px solid @border-color__base;
-@button__hover__color: @button__color;
-@button__hover__background: darken(@button__background, 5%);
-@button__active__background: @color-gray-darken1;
+@button__color: @color-black-dark1;
+@button__background: @color-white;
+@button__border: 2px solid @color-black-dark1;
+@button__hover__color: @color-white;
+@button__hover__background: @color-black-dark1;
+@button__active__background: @color-black-dark1;
+@button__active__color: @color-white;
 
 //  Primary button
+@button-primary__padding: 0 49px;
+@button-primary__line-height: 38px;
+@button-primary__background: @color-green1;
+@button-primary__border: 1px solid @color-green1;
+@button-primary__hover__background: @color-green2;
 @button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
+@button-primary__hover__border: 1px solid @color-green2;
+@button-primary__active__background: @color-green2;
+@button-primary__active__border: 1px solid @color-green2;
 @button-primary__active__color: @color-white;
 
 //  Button with icon
@@ -160,6 +173,11 @@
 //
 //  Forms
 //  ---------------------------------------------
+
+//  Inputs
+@form-element-input__height: 40px;
+@form-element-input__border-color: @color-gray-middle1;
+@form-element-input__border-radius: 0;
 
 //  Select
 @select__background: @form-element-input__background url("../images/select-bg.svg") no-repeat 100% 45%;
@@ -293,80 +311,3 @@
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
-/* 
-& when (@media-common = true) {
-    .style-guide-title {
-        color: @color-gray-darken0;
-        font-family: @font-family__HelveticalLight;
-        .lib-css(font-size, 30px);
-    }
-    .action.third-btn {
-        .lib-button(
-            @_button-color: @color-black-dark1,
-            @_button-background: @color-white,
-            @_button-line-height: 22px,
-            @_button-width: 140px,
-            @_button-border: 2px solid @color-black-dark1,
-            @_button-margin: false,
-
-            @_button-color-hover: @color-white,
-            @_button-background-hover: @color-black-dark1,
-            @_button-border-hover: 2px solid @color-black-dark1,
-            @_button-color-active: @color-white,
-            @_button-background-active: @color-black-dark1,
-            @_button-border-active: 2px solid @color-black-dark1,
-        );
-    }
-    .action.primary.hover {
-        background-color: @color-green2;
-    }
-    .action.third-btn.hover {
-        background-color: @color-black-dark1;
-        color: @color-white;
-    }
-    input[type="number"].qty {
-        .lib-css(width, 40px);
-        .lib-css(text-align-last, center);
-    }
-    button.ipn-step-up,
-    button.ipn-step-down {
-        .lib-button(
-            @_button-color: @color-gray96,
-            @_button-background: @color-white,
-            @_button-line-height: 40px,
-            @_button-width: 39px,
-            @_button-border: 1px solid @color-gray-middle1,
-            @_button-margin: false,
-
-            @_button-color-hover: @color-gray96,
-            @_button-background-hover: @color-white-fog,
-            @_button-border-hover: 1px solid @color-gray-middle1,
-            @_button-color-active: @color-gray96,
-            @_button-background-active: @color-white-fog,
-            @_button-border-active: 1px solid @color-gray-middle1,
-        );
-    }
-    button.ipn-step-up,
-    button.ipn-step-up:hover,
-    button.ipn-step-up:active {
-        .lib-css(border-left, none);
-        .lib-css(box-shadow, none);
-    }
-    button.ipn-step-down,
-    button.ipn-step-down:hover,
-    button.ipn-step-down:active {
-        .lib-css(border-right, none);
-        .lib-css(box-shadow, none);
-    }
-    .sg-btn,
-    .sg-btn-hover {
-        margin-bottom: 10px;
-        button.action {
-            margin-right: 10px;
-        }
-        input {
-            .lib-css(vertical-align, bottom);
-        }
-    }
-}
- */
