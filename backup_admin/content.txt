@@ -14,7 +14,7 @@
 <button class="action secondary hover">STANDARD</button>
 <span class="ipn-step-down"><i class="fal fa-minus"></i></span>
 <input class="input-text qty" title="Qty" name="qty" type="number" value="1">
-<span class="ipn-step-up"><i class="fal fa-plus"></i></span>
+<span class="ipn-step-up hover"><i class="fal fa-plus"></i></span>
 </div>
 </div>
 <div>
@@ -67,8 +67,18 @@ Sample Typo <br><a href="#">Text link</a> <br><a href="#">Text link hover</a>
 </div>
 <div>
 <p class="style-guide-title">Misc</p>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
+<div>
+<a href="#" class="icon"><span><i class="fal fa-times"></i></span></a>
+<a href="#" class="icon"><span><i class="fab fa-facebook-f"></i></span></a>
+<a href="#" class="icon"><span><i class="fab fa-instagram"></i></span></a>
+<a href="#" class="icon"><span><i class="fab fa-twitter"></i></span></a>
+</div>
+<div>
+<a href="#" class="icon hover"><span><i class="fal fa-times"></i></span></a>
+<a href="#" class="icon hover"><span><i class="fab fa-facebook-f"></i></span></a>
+<a href="#" class="icon hover"><span><i class="fab fa-instagram"></i></span></a>
+<a href="#" class="icon hover"><span><i class="fab fa-twitter"></i></span></a>
+</div>
 <div>{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}} {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}</div>
 </div>
 </div>
