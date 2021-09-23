@@ -13,7 +13,7 @@
     }
     .style-guide-title {
         .lib-css(color, @color-gray-darken0);
-        .lib-css(font-family, "HelveticalLight-Regular");
+        .lib-css(font-family, @font-helveticalight-regular);
         .lib-css(font-size, 30px);
     }
     .action.primary.hover {
@@ -61,6 +61,168 @@
         }
         input {
             .lib-css(vertical-align, bottom);
+        }
+    }
+    input[type="checkbox"] {
+        .lib-css(top, 0);
+    }
+
+    //  CUSTOM CHECKBOX
+    /* The checkbox container */
+    .checkbox-container {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: @custom__checkbox__width;
+        min-height: @custom__checkbox__height;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* Create a custom checkbox */
+        .checkmark {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: @custom__checkbox__height;
+            width: @custom__checkbox__width;
+            background-color: @color-white;
+            border: 1px solid @color-gray-darken2;
+            /* Create the checkmark/indicator */
+            &:after {
+                /* (hidden when not checked) */
+                content: "";
+                position: absolute;
+                display: none;
+                /* Style the checkmark/indicator */
+                left: 6px;
+                top: 2px;
+                width: 4px;
+                height: 9px;
+                border: solid @color-black;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        /* On mouse-over, add a background color */
+        &:hover input[type="checkbox"] ~ .checkmark {
+            background-color: @color-white;
+        }
+        /* Hide the browser's default checkbox */
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            /* When the checkbox is checked, add a background color*/
+            &:checked ~ .checkmark {
+                background-color: @color-white;
+                /* Show the checkmark when checked */
+                &:after {
+                    display: block;
+                }
+            }
+            /* When the checkbox is disabled, change color */
+            &:disabled ~ .checkmark {
+                background-color: @color-gray-light0;
+                &:after {
+                    border-color: @color-gray-darken2;
+                }
+            }
+        }
+        .content {
+            display: inline-block;
+            padding-left: @custom__space_content_checkbox;
+        }
+    }
+
+    //  CUSTOM RADIO
+    /* The checkbox container */
+    .radio-container {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: @custom__radio__size;
+        min-height: @custom__radio__size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* Create a custom radio */
+        .checkmark {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: @custom__radio__size;
+            width: @custom__radio__size;
+            background-color: @color-white;
+            border: 1px solid @color-gray-darken2;
+            border-radius: 50%;
+            /* Create the checkmark/indicator */
+            &:after {
+                /* (hidden when not checked) */
+                content: "";
+                position: absolute;
+                display: none;
+                /* Style the checkmark/indicator */
+                top: 50%;
+                left: 50%;
+                width: @custom__radio__dot_size;
+                height: @custom__radio__dot_size;
+                background: @color-black;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+        }
+        /* On mouse-over, add a background color */
+        &:hover input[type="radio"] ~ .checkmark {
+            background-color: @color-white;
+        }
+        /* Hide the browser's default radio */
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            /* When the radio is checked, add a background color*/
+            &:checked ~ .checkmark {
+                background-color: @color-white;
+                /* Show the checkmark when checked */
+                &:after {
+                    display: block;
+                }
+            }
+            /* When the radio is disabled, change color */
+            &:disabled ~ .checkmark {
+                background-color: @color-gray-light0;
+                &:after {
+                    background-color: @color-gray-darken2;
+                }
+            }
+        }
+        .content {
+            display: inline-block;
+            padding-left: @custom__space_content_radio;
+        }
+    }
+    .sg-checkbox-radio {
+        .sg-checkbox,
+        .sg-radio {
+            display: inline-block;
+            div {
+                margin-bottom: 10px;
+            }
+        }
+        .sg-checkbox {
+            margin-right: 50px;
         }
     }
 }

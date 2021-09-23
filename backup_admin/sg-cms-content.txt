@@ -1,85 +1,177 @@
 <div class="row style-guide">
 <div class="col">
-<div>
+<div class="sg-buttons">
 <p class="style-guide-title">Buttons</p>
 <div class="sg-btn">
 <button class="action primary">ADD TO CART</button>
 <button class="action secondary">STANDARD</button>
 <span class="ipn-step-down"><i class="fal fa-minus"></i></span>
-<input class="input-text qty" title="Qty" name="qty" type="number" value="1">
+<input class="input-text qty" title="Qty" name="qty" type="number" min="0" value="1" />
 <span class="ipn-step-up"><i class="fal fa-plus"></i></span>
 </div>
 <div class="sg-btn-hover">
 <button class="action primary hover">ADD TO CART</button>
 <button class="action secondary hover">STANDARD</button>
 <span class="ipn-step-down"><i class="fal fa-minus"></i></span>
-<input class="input-text qty" title="Qty" name="qty" type="number" value="1">
+<input class="input-text qty" title="Qty" name="qty" type="number" min="0" value="1" />
 <span class="ipn-step-up hover"><i class="fal fa-plus"></i></span>
 </div>
 </div>
+<div class="sg-checkbox-radio">
+<p class="style-guide-title">Checkboxes & Radio buttons</p>
+<div class="sg-checkbox">
 <div>
-<p class="style-guide-title">Checkboxes &amp; Radio buttons</p>
-<div><input id="" class="checkbox" checked="checked" name="" type="checkbox"> <input id="" class="radio" checked="checked" name="" type="radio"></div>
-<div><input id="" class="checkbox" name="" type="checkbox"> <input id="" class="radio" name="" type="radio"></div>
-<div><input id="" class="checkbox" checked="checked" disabled="disabled" name="" type="checkbox"> <input id="" class="radio" checked="checked" disabled="disabled" name="" type="radio"></div>
-<div><input id="" class="checkbox" disabled="disabled" name="" type="checkbox"> <input id="" class="radio" disabled="disabled" name="" type="radio"></div>
+<label class="checkbox-container">
+<span class="content">Ticked</span>
+<input id="" class="checkbox" checked name="" type="checkbox" />
+<span class="checkmark"></span>
+</label>
 </div>
 <div>
-<p class="style-guide-title">Input Fields</p>
+<label class="checkbox-container">
+<span class="content">Not Ticked</span>
+<input id="" class="checkbox" name="" type="checkbox" />
+<span class="checkmark"></span>
+</label>
+</div>
 <div>
-<div class="actions dropdown example-dropdown-1"><button class="action toggle" data-mage-init="{" data-toggle="dropdown" aria-haspopup="true"> button + dropdown </button>
+<label class="checkbox-container">
+<span class="content">Ticked, Disabled</span>
+<input id="" class="checkbox" checked disabled name="" type="checkbox" />
+<span class="checkmark"></span>
+</label>
+</div>
+<div>
+<label class="checkbox-container">
+<span class="content">Disabled</span>
+<input id="" class="checkbox" disabled name="" type="checkbox" />
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="sg-radio">
+<div>
+<label class="radio-container">
+<span class="content">Selected</span>
+<input id="" class="radio" checked name="" type="radio" />
+<span class="checkmark"></span>
+</label>
+</div>
+<div>
+<label class="radio-container">
+<span class="content">Not Selected</span>
+<input id="" class="radio" name="" type="radio" />
+<span class="checkmark"></span>
+</label>
+</div>
+<div>
+<label class="radio-container">
+<span class="content">Selected, Disabled</span>
+<input id="" class="radio" checked disabled name="" type="radio" />
+<span class="checkmark"></span>
+</label>
+</div>
+<div>
+<label class="radio-container">
+<span class="content">Disabled</span>
+<input id="" class="radio" disabled name="" type="radio" />
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="sg-inputs">
+<p class="style-guide-title">Input Fields</p>
+<div class="actions dropdown example-dropdown-1">
+<button class="action toggle" data-toggle="dropdown" aria-haspopup="true">
+<span>button + dropdown</span>
+</button>
 <ul class="dropdown">
-<li><span class="item">One</span></li>
-<li><span class="item">Two</span></li>
-<li><span class="item">Three</span></li>
+<li>
+<span class="item">One</span>
+</li>
+<li>
+<span class="item">Two</span>
+</li>
+<li>
+<span class="item">Three</span>
+</li>
 </ul>
 </div>
+<div><input class="input-text" type="text" /></div>
+<div><input class="input-text input-selected" type="text" /></div>
+<div><input class="input-text mage-error" type="text" /></div>
 </div>
-<div><input class="input-text" type="text"></div>
-<div><input class="input-text input-selected" type="text"></div>
-<div><input class="input-text mage-error" type="text"></div>
-</div>
-<div>
+<div class="sg-navigation">
 <p id="style-guide-tabs" class="style-guide-title">Navigation</p>
 <div class="product data items">
-<div class="item title" data-role="collapsible"><a class="switch" href="#description" data-toggle="trigger">DESCRIPTION</a></div>
+<div class="item title" data-role="collapsible">
+<a class="switch" href="#description" data-toggle="trigger">DESCRIPTION</a>
+</div>
 <div id="description" class="item content" data-role="content">DESCRIPTION</div>
-<div class="item title" data-role="collapsible"><a class="switch" href="#specifications" data-toggle="trigger">SPECIFICATIONS</a></div>
+<div class="item title" data-role="collapsible">
+<a class="switch" href="#specifications" data-toggle="trigger">SPECIFICATIONS</a>
+</div>
 <div id="specifications" class="item content" data-role="content">SPECIFICATIONS</div>
-<div class="item title" data-role="collapsible"><a class="switch" href="#faq" data-toggle="trigger">FAQ</a></div>
+<div class="item title" data-role="collapsible">
+<a class="switch" href="#faq" data-toggle="trigger">FAQ</a>
+</div>
 <div id="faq" class="item content" data-role="content">FAQ</div>
 </div>
 </div>
 </div>
 <div class="col">
-<div>
+<div class="sg-alerts">
 <p class="style-guide-title">Alerts</p>
 <div class="error message">Product has been added to your shopping bag</div>
 <div class="success message">Invalid username or password</div>
 </div>
-<div>
+<div class="sg-typography">
 <p class="style-guide-title">Typography</p>
-Sample Typo <br><a href="#">Text link</a> <br><a href="#">Text link hover</a>
+Sample Typo
+<br /><br />
+<a href="#">Text link</a>
+<br />
+<a href="#" class="sg-link-hover">Text link hover</a>
 <h1>h1 Lora Regular - 32px</h1>
 <h2>h2 Lora Regular - 24px</h2>
 <h3>h3 Lora Regular - 18px</h3>
 <h4>Roboto Bold - 15px</h4>
 </div>
-<div>
+<div class="sg-misc">
 <p class="style-guide-title">Misc</p>
 <div>
-<a href="#" class="icon"><span><i class="fal fa-times"></i></span></a>
-<a href="#" class="icon"><span><i class="fab fa-facebook-f"></i></span></a>
-<a href="#" class="icon"><span><i class="fab fa-instagram"></i></span></a>
-<a href="#" class="icon"><span><i class="fab fa-twitter"></i></span></a>
+<a href="#" class="icon">
+<span><i class="fal fa-times"></i></span>
+</a>
+<a href="#" class="icon">
+<span><i class="fab fa-facebook-f"></i></span>
+</a>
+<a href="#" class="icon">
+<span><i class="fab fa-instagram"></i></span>
+</a>
+<a href="#" class="icon">
+<span><i class="fab fa-twitter"></i></span>
+</a>
 </div>
 <div>
-<a href="#" class="icon hover"><span><i class="fal fa-times"></i></span></a>
-<a href="#" class="icon hover"><span><i class="fab fa-facebook-f"></i></span></a>
-<a href="#" class="icon hover"><span><i class="fab fa-instagram"></i></span></a>
-<a href="#" class="icon hover"><span><i class="fab fa-twitter"></i></span></a>
+<a href="#" class="icon hover">
+<span><i class="fal fa-times"></i></span>
+</a>
+<a href="#" class="icon hover">
+<span><i class="fab fa-facebook-f"></i></span>
+</a>
+<a href="#" class="icon hover">
+<span><i class="fab fa-instagram"></i></span>
+</a>
+<a href="#" class="icon hover">
+<span><i class="fab fa-twitter"></i></span>
+</a>
 </div>
-<div>{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}} {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}</div>
+<div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
+</div>
 </div>
 </div>
 </div>
