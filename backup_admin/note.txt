@@ -1,0 +1,1 @@
+1. sg-cms-content.txt containt content for cms page name "Style Guide" with url key = "style-guide"
