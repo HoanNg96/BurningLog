@@ -25,6 +25,7 @@
 @font-lora-regular: "Lora-Regular";
 @font-roboto-bold: "Roboto-Bold";
 @font-roboto-regular: "Roboto-Regular";
+@font-roboto-medium: "Roboto-Medium";
 
 //  Color nesting
 @panel__background-color: @color-gray-light0;
@@ -35,7 +36,8 @@
 @h3__margin-top: @indent__base;
 
 //  Links
-@link__color: @theme__color__primary-alt;
+@link__color: @color-black-dark3;
+@link__hover__color: @color-gray97;
 
 //  Focus
 @focus__color: @color-gray-middle1; //@color-gray-light0
@@ -82,6 +84,7 @@
 @tab-control__margin-right: -1px;
 @tab-control__padding-top: 1px;
 @tab-control__padding-right: 35px;
+@tab-control__font-family: @font-roboto-bold;
 
 //  Tabs content
 @tab-content__padding-top: 35px;
@@ -171,6 +174,18 @@
 @message-icon__top: 22px;
 @message-error-icon: @icon-error;
 @message-success-icon: @icon-success;
+@message__font-family: @font-roboto-medium;
+@message__font-size: 15px;
+@message__line-height: 1.6em;
+@message__border-width: 1px;
+@message__border-color: transparent;
+@message__border-style: solid;
+@error__color: @color-red13;
+@message-success__color: @color-green3;
+@message-error__background: @color-white;
+@message-success__background: @color-white;
+@message-error__border-color: @color-red15;
+@message-success__border-color: @color-green4;
 
 //
 //  Loaders
@@ -186,6 +201,7 @@
 @form-element-input__height: 40px;
 @form-element-input__border-color: @color-gray-middle1;
 @form-element-input__border-radius: 0;
+@form-element-validation__border-error: @color-red15;
 
 //  Select
 @select__background: @form-element-input__background url("../images/select-bg.svg") no-repeat 100% 45%;

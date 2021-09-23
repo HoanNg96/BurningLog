@@ -1,4 +1,6 @@
 & when (@media-common = true) {
+    /* #region common */
+
     .row.style-guide {
         display: -ms-flexbox;
         display: flex;
@@ -16,6 +18,10 @@
         .lib-css(font-family, @font-helveticalight-regular);
         .lib-css(font-size, 30px);
     }
+
+    /* #endregion */
+
+    /* #region buttons */
     .action.primary.hover {
         .lib-css(background-color, @color-green2);
     }
@@ -66,7 +72,9 @@
     input[type="checkbox"] {
         .lib-css(top, 0);
     }
+    /* #endregion */
 
+    /* #region checkbox radio */
     //  CUSTOM CHECKBOX
     /* The checkbox container */
     .checkbox-container {
@@ -225,7 +233,59 @@
             margin-right: 50px;
         }
     }
+    /* #endregion */
+
+    /* #region input */
+
+    .input-select-dropdown {
+        .lib-dropdown(
+            @_toggle-selector : ~".action.toggle",
+            @_options-selector : ~"ul.dropdown-options"
+        );
+        .lib-css(display, block);
+    }
+
+    .action.toggle[data-toggle="dropdown"] {
+        height: @form-element-input__height;
+        line-height: @form-element-input__height;
+        border: 1px solid @color-gray-middle1;
+        padding: 0 9px;
+        padding-right: 32px;
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    .sg-inputs {
+        div {
+            margin-bottom: 10px;
+            width: 320px;
+        }
+        .input-selected {
+            box-shadow: 0 0 3px 1px @color-gray-middle1;
+        }
+        .action.toggle[data-toggle="dropdown"] {
+            display: block;
+        }
+    }
+
+    /* #endregion */
+
+    /* #region alerts */
+
+    .message {
+        text-align: center;
+    }
+
+    /* #endregion */
 }
+
+/* #region resonsive */
 
 @media screen and (min-width: @screen__m) {
     .row.style-guide {
@@ -240,3 +300,5 @@
         }
     }
 }
+
+/* #endregion */
