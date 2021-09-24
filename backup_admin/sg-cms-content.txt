@@ -3,18 +3,14 @@
 <div class="sg-buttons">
 <p class="style-guide-title">Buttons</p>
 <div class="sg-btn">
-<button class="action primary">ADD TO CART</button>
-<button class="action secondary">STANDARD</button>
-<span class="ipn-step-down"><i class="fal fa-minus"></i></span>
+<button class="action primary" id="product-addtocart-button">ADD TO CART</button>
+<button class="action primary">STANDARD</button>
 <input class="input-text qty" title="Qty" name="qty" type="number" min="0" value="1" />
-<span class="ipn-step-up"><i class="fal fa-plus"></i></span>
 </div>
 <div class="sg-btn-hover">
-<button class="action primary hover">ADD TO CART</button>
-<button class="action secondary hover">STANDARD</button>
-<span class="ipn-step-down"><i class="fal fa-minus"></i></span>
-<input class="input-text qty" title="Qty" name="qty" type="number" min="0" value="1" />
-<span class="ipn-step-up hover"><i class="fal fa-plus"></i></span>
+<button class="action primary hover" id="product-addtocart-button-hover">ADD TO CART</button>
+<button class="action primary hover">STANDARD</button>
+<input class="input-text qty hover" title="Qty" name="qty" type="number" min="0" value="1" />
 </div>
 </div>
 <div class="sg-checkbox-radio">
@@ -83,7 +79,12 @@
 <div class="sg-inputs">
 <p class="style-guide-title">Input Fields</p>
 <div class="input-select-dropdown sg-input-field">
-<span class="action toggle" data-toggle="dropdown" aria-haspopup="true" data-mage-init='{"dropdown":{}}'>
+<span
+class="action toggle"
+data-toggle="dropdown"
+aria-haspopup="true"
+data-mage-init='{"dropdown":{}}'
+>
 <span>Dropdown field</span>
 </span>
 <ul class="dropdown-options">
@@ -98,40 +99,48 @@
 </li>
 </ul>
 </div>
-<div class="sg-input-field"><input class="input-text" type="text" value="Text field"/></div>
-<div class="sg-input-field"><input class="input-text input-selected" type="text" value="Text field selected" /></div>
+<div class="sg-input-field"><input class="input-text" type="text" value="Text field" /></div>
 <div class="sg-input-field">
-<input class="input-text mage-error" type="text" value="Email@liv,com" id="error-input"/>
+<input class="input-text input-selected" type="text" value="Text field selected" />
+</div>
+<div class="sg-input-field">
+<input class="input-text mage-error" type="text" value="Email@liv,com" id="error-input" />
 <div class="mage-error" generated="true">Please enter a valid email address</div>
 </div>
 </div>
 <div class="sg-navigation tabs-widget">
 <p id="style-guide-tabs" class="style-guide-title">Navigation</p>
-<div class="product data items" data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 0, "disabled": [], "disabledState": "disabled"}}'>
+<div
+class="product data items"
+data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 0, "disabled": [], "disabledState": "disabled"}}'
+>
 <div class="item title" data-role="collapsible">
 <a class="switch" href="#description" data-toggle="trigger">DESCRIPTION</a>
 </div>
 <div id="description" class="item content" data-role="content">
-<h3>Amafli 5 Seater  Aluminium Outdoor Modular Lounge Setting Featuring Sunbrella Fabric</h3>
-<p>•  The Amalfi Aluminium Modular Lounge is made up of individual pieces allowing you to tailor the setting to your outdoor space.<br>
-•  Aluminium Lounges are the newest outdoor trend for this season as they look great and perform well outdoors.<br>
-•  It won't rust, rot or split making it perfect in any weather.<br>
-•  Low maintenance, cleaning as easy as wiping down or hosing off when necessary.<br>
-•  Sunbrella high performance fabric used on the cushions is highly UV, water and mildew resitant
-<br><br>
-Brand: Royalle<br>
-Chair Material: Aluminium<br>
-Chair Colour: Gun Metal <br>
-Cushion Material: Sunbrella<br>
+<h3>Amafli 5 Seater Aluminium Outdoor Modular Lounge Setting Featuring Sunbrella Fabric</h3>
+<p>
+• The Amalfi Aluminium Modular Lounge is made up of individual pieces allowing you to tailor the
+setting to your outdoor space.<br />
+• Aluminium Lounges are the newest outdoor trend for this season as they look great and perform
+well outdoors.<br />
+• It won't rust, rot or split making it perfect in any weather.<br />
+• Low maintenance, cleaning as easy as wiping down or hosing off when necessary.<br />
+• Sunbrella high performance fabric used on the cushions is highly UV, water and mildew resitant
+<br /><br />
+Brand: Royalle<br />
+Chair Material: Aluminium<br />
+Chair Colour: Gun Metal <br />
+Cushion Material: Sunbrella<br />
 Cushion Colour: Canvas Coal
-<br><br>
-This set includes:
-1 x Amalfi Left  Two Seater with Sunbrella Base and Back Cushions - 76cm x 146cm<br>
-1 x Amalfi Right Two Seater with Sunbrella Base and Back Cushions -  76cm x 146cm<br>
-1 x Amalfi Corner Sofa with Sunbrella Base and Back Cushions -  76cm x 76cm<br>
+<br /><br />
+This set includes:<br />
+1 x Amalfi Left Two Seater with Sunbrella Base and Back Cushions - 76cm x 146cm<br />
+1 x Amalfi Right Two Seater with Sunbrella Base and Back Cushions - 76cm x 146cm<br />
+1 x Amalfi Corner Sofa with Sunbrella Base and Back Cushions - 76cm x 76cm<br />
 1 x Amalfi Coffee Table -Gun Metal - 130 x 62cm
-<br><br>
-Please note:<br>
+<br /><br />
+Please note:<br />
 Accent cushions in photographs are not included
 </p>
 </div>
@@ -154,11 +163,18 @@ Accent cushions in photographs are not included
 </div>
 <div class="sg-typography">
 <p class="style-guide-title">Typography</p>
-<p>Open Sans Regular - 13px / 20px<br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<p>
+Open Sans Regular - 13px / 20px<br />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.
 <br /><br />
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-<br><br>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+explicabo.
+<br /><br />
 <a href="#">Text link</a>
 <br />
 <a href="#" class="sg-link-hover">Text link hover</a>
@@ -166,14 +182,15 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <h1>h1 Lora Regular - 32px</h1>
 <h2>h2 Lora Regular - 24px</h2>
 <h3>h3 Lora Regular - 18px</h3>
-<h4>Roboto Bold - 15px</h4>
+<h4>h4 Roboto Bold - 15px</h4>
 </div>
 <div class="sg-misc">
 <p class="style-guide-title">Misc</p>
 <div>
-<a href="#" class="icon">
-<span><i class="fal fa-times"></i></span>
-</a>
+<div class="minicart-wrapper">
+<button type="button" class="action close"></button>
+</div>
+<div class="social">
 <a href="#" class="icon">
 <span><i class="fab fa-facebook-f"></i></span>
 </a>
@@ -184,10 +201,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <span><i class="fab fa-twitter"></i></span>
 </a>
 </div>
+</div>
 <div>
-<a href="#" class="icon hover">
-<span><i class="fal fa-times"></i></span>
-</a>
+<div class="minicart-wrapper">
+<button type="button" class="action close hover"></button>
+</div>
+<div class="social">
 <a href="#" class="icon hover">
 <span><i class="fab fa-facebook-f"></i></span>
 </a>
@@ -198,8 +217,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <span><i class="fab fa-twitter"></i></span>
 </a>
 </div>
-<div>
+</div>
+<div class="promo-block">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
+</div>
+<div class="promo-block hover">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
 </div>
 </div>

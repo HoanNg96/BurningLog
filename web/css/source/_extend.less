@@ -17,23 +17,82 @@
         .lib-css(color, @color-gray-darken0);
         .lib-css(font-family, @font-helveticalight-regular);
         .lib-css(font-size, 30px);
+        .lib-css(margin-top, 70px);
+        .lib-css(margin-bottom, 20px);
     }
 
     /* #endregion */
 
     /* #region buttons */
     .action.primary.hover {
-        .lib-css(background-color, @color-green2);
-    }
-    .action.secondary.hover {
-        .lib-css(background-color, @color-black-dark1);
         .lib-css(color, @color-white);
+        .lib-css(background-color, @color-black-dark1);
+    }
+    #product-addtocart-button {
+        .lib-button(
+            @_button-color: @color-white,
+            @_button-background: @color-green1,
+            @_button-line-height: 40px,
+            @_button-border: none,
+            @_button-display: block,
+            @_button-width: 100%,
+            @_button-background-hover: @color-green2,
+            @_button-color-hover: @color-white,
+            @_button-border-hover: none,
+            @_button-background-active: @color-green2,
+            @_button-color-active: @color-white,
+            @_button-border-active: none
+        );
+    }
+    #product-addtocart-button-hover {
+        .lib-button(
+            @_button-color: @color-white,
+            @_button-background: @color-green2,
+            @_button-line-height: 40px,
+            @_button-border: none,
+            @_button-width: 180px,
+            @_button-background-hover: @color-green2,
+            @_button-color-hover: @color-white,
+            @_button-border-hover: none,
+            @_button-background-active: @color-green2,
+            @_button-color-active: @color-white,
+            @_button-border-active: none
+        );
+    }
+    .sg-buttons {
+        #product-addtocart-button,
+        #product-addtocart-button-hover {
+            display: inline-block;
+            width: 180px;
+            margin-right: 6px;
+        }
     }
     input[type="number"].qty {
         .lib-css(width, 40px);
         .lib-css(text-align-last, center);
+        &::after,
+        &::before {
+            .lib-css(width, 38px);
+            .lib-css(height, 38px);
+            .lib-css(border, 1px solid @color-gray-middle1);
+            .lib-css(line-height, 38px);
+            .lib-css(display, block);
+            /* .lib-css(font-family, "Font Awesome 5 Pro");
+            .lib-css(font-weight, 300); */
+            &:hover {
+                .lib-css(background-color, @color-white-fog);
+            }
+        }
+        &::before {
+            /* content: "\f068"; */
+            content: "-";
+        }
+        &::after {
+            /* content: "\f067"; */
+            content: "+";
+        }
     }
-    span.ipn-step-up,
+    /* span.ipn-step-up,
     span.ipn-step-down {
         .lib-css(display, inline-block);
         .lib-css(vertical-align, bottom);
@@ -51,30 +110,30 @@
     span.ipn-step-up:hover,
     span.ipn-step-up:active {
         .lib-css(border-left, none);
-        .lib-css(margin-left, -4px);
+        .lib-css(margin-left, -3px);
     }
     span.ipn-step-down,
     span.ipn-step-down:hover,
     span.ipn-step-down:active {
         .lib-css(border-right, none);
-        .lib-css(margin-right, -4px);
-    }
+        .lib-css(margin-right, -3px);
+    } */
     .sg-btn,
     .sg-btn-hover {
         margin-bottom: 10px;
-        button.action {
-            margin-right: 6px;
+        .action.primary {
+            .lib-css(margin-right, 6px);
         }
         input {
             .lib-css(vertical-align, bottom);
         }
     }
-    input[type="checkbox"] {
-        .lib-css(top, 0);
-    }
     /* #endregion */
 
     /* #region checkbox radio */
+    input[type="checkbox"] {
+        .lib-css(top, 0);
+    }
     //  CUSTOM CHECKBOX
     /* The checkbox container */
     .checkbox-container {
@@ -280,6 +339,65 @@
 
     .message {
         text-align: center;
+    }
+
+    /* #endregion */
+
+    /* #region typography */
+
+    .sg-typography h1 {
+        margin-top: 50px;
+    }
+    a.sg-link-hover {
+        .lib-css(color, @color-gray97);
+    }
+
+    /* #endregion */
+
+    /* #region misc */
+
+    a.icon {
+        .lib-css(color, @color-black-dark5);
+        &:hover {
+            .lib-css(color, @color-black);
+        }
+    }
+
+    .minicart-wrapper .action.close {
+        &::before {
+            color: @color-gray-middle6;
+        }
+        &:hover ::before {
+            color: @color-black-dark6;
+        }
+    }
+
+    .sg-misc {
+        a.icon {
+            margin-right: 15px;
+            &.hover {
+                .lib-css(color, @color-black);
+            }
+        }
+        .minicart-wrapper {
+            float: left;
+            margin-left: 0;
+            margin-right: 15px;
+            .action.close,
+            .action.close.hover {
+                top: 3px;
+                right: unset;
+                left: 0;
+                height: auto;
+                width: auto;
+                &::before {
+                    line-height: normal;
+                }
+            }
+        }
+        .social {
+            margin-left: 30px;
+        }
     }
 
     /* #endregion */
