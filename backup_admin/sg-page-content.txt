@@ -5,12 +5,20 @@
 <div class="sg-btn">
 <button class="action primary" id="product-addtocart-button">ADD TO CART</button>
 <button class="action primary">STANDARD</button>
+<div class="qty-block">
+<span class="ipn-step-down"><i class="far fa-minus"></i></span>
 <input class="input-text qty" title="Qty" name="qty" type="number" min="0" value="1" />
+<span class="ipn-step-up"><i class="far fa-plus"></i></span>
+</div>
 </div>
 <div class="sg-btn-hover">
 <button class="action primary hover" id="product-addtocart-button-hover">ADD TO CART</button>
 <button class="action primary hover">STANDARD</button>
+<div class="qty-block">
+<span class="ipn-step-down"><i class="far fa-minus"></i></span>
 <input class="input-text qty hover" title="Qty" name="qty" type="number" min="0" value="1" />
+<span class="ipn-step-up"><i class="far fa-plus"></i></span>
+</div>
 </div>
 </div>
 <div class="sg-checkbox-radio">
@@ -218,12 +226,75 @@ explicabo.
 </a>
 </div>
 </div>
+<div class="sg-promo">
+<div class="row">
+<div class="col">
 <div class="promo-block">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
 </div>
+</div>
+<div class="col">
 <div class="promo-block hover">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<script>
+require(["jquery", "jquery-ui-modules/widget"], function ($) {
+"use strict";
+$(document).ready(function () {
+$(".ipn-step-down").click(function () {
+var qty = parseFloat($(this).next().val());
+var step = parseFloat($(this).next().attr("step"));
+var min_qty = parseFloat($(this).next().attr("min"));
+if (isNaN(step)) {
+step = 1;
+}
+if (isNaN(qty)) {
+if (isNaN(min_qty)) {
+new_qty = 0;
+} else {
+new_qty = min_qty;
+}
+} else {
+var new_qty = qty - step;
+if (isNaN(min_qty)) {
+min_qty = 0;
+}
+if (new_qty < min_qty) {
+var new_qty = min_qty;
+}
+}
+$(this).next().val(new_qty);
+});
+$(".ipn-step-up").click(function () {
+var qty = parseFloat($(this).prev().val());
+var step = parseFloat($(this).prev().attr("step"));
+var max_qty = parseFloat($(this).prev().attr("max"));
+var min_qty = parseFloat($(this).prev().attr("min"));
+if (isNaN(step)) {
+step = 1;
+}
+if (isNaN(qty)) {
+if (isNaN(min_qty)) {
+new_qty = 0;
+} else {
+new_qty = min_qty;
+}
+} else {
+var new_qty = qty + step;
+if (!isNaN(max_qty)) {
+if (new_qty > max_qty) {
+var new_qty = max_qty;
+}
+}
+}
+$(this).prev().val(new_qty);
+});
+});
+});
+</script>
