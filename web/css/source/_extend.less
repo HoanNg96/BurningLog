@@ -6,14 +6,13 @@
         display: flex;
         margin-right: -15px;
         margin-left: -15px;
+        flex-wrap: wrap;
     }
-    .style-guide {
-        .col {
-            position: relative;
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
+    .col {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     .style-guide-title {
         .lib-css(color, @color-gray-darken0);
@@ -21,6 +20,56 @@
         .lib-css(font-size, 30px);
         .lib-css(margin-top, 70px);
         .lib-css(margin-bottom, 20px);
+    }
+    .style-guide-heading {
+        background-color: @color-red14;
+        height: 200px;
+        color: @color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .sg-heading-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .sg-theme-name {
+            padding: 17px 20px;
+            border-bottom: 1px solid @color-red16;
+            font-size: 38px;
+            font-family: @font-roboto-bold;
+            letter-spacing: -1px;
+            display: flex;
+            flex-direction: column;
+            p {
+                margin-bottom: 0;
+                text-align: center;
+                line-height: 44px;
+                &:last-child {
+                    line-height: 13px;
+                }
+            }
+            span {
+                font-family: @font-roboto-regular;
+                font-size: 13px;
+                line-height: 13px;
+                letter-spacing: 2.2px;
+                &:first-child {
+                    border-right: 1px solid @color-white;
+                    padding-right: 7px;
+                }
+                &:last-child {
+                    padding-left: 7px;
+                }
+            }
+        }
+        .sg-page-name {
+            text-align: center;
+            width: 100%;
+            font-size: 30px;
+            font-family: @font-helveticalight-regular;
+        }
     }
 
     /* #endregion */
@@ -118,6 +167,9 @@
         .qty-block {
             margin-bottom: 9px;
             vertical-align: middle;
+        }
+        .sg-btn-hover input {
+            vertical-align: bottom;
         }
     }
     /* #endregion */
@@ -315,13 +367,27 @@
     .sg-inputs {
         div {
             margin-bottom: 10px;
-            width: 320px;
+            max-width: 320px;
         }
         .input-selected {
             box-shadow: 0 0 3px 1px @color-gray-middle1;
         }
         .action.toggle[data-toggle="dropdown"] {
             display: block;
+        }
+    }
+
+    /* #endregion */
+
+    /* #region navigation */
+
+    .sg-navigation {
+        .product.data.items {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        h3 {
+            font-family: @font-roboto-medium;
         }
     }
 
@@ -373,6 +439,7 @@
             float: left;
             margin-left: 0;
             margin-right: 15px;
+            margin-top: 0;
             .action.close,
             .action.close.hover {
                 top: 3px;
@@ -398,6 +465,7 @@
     .promo-block {
         position: relative;
         overflow: hidden;
+        margin-bottom: 10px;
         a {
             position: absolute;
             top: 50%;
@@ -428,30 +496,103 @@
             );
         }
     }
+    .promo-block-container.hover {
+        a {
+            background-color: @color-black-dark2;
+        }
+    }
 
     /* #endregion */
 }
 
 /* #region resonsive */
 
-@media screen and (min-width: @screen__m) {
+@media screen and (max-width: @screen__s) {
+    .sg-buttons {
+        .action,
+        .qty-block {
+            display: block;
+        }
+    }
+    .sg-checkbox-radio .sg-radio {
+        display: block;
+    }
+}
+@media screen and (min-width: @screen__s) {
     .style-guide {
-        .col {
-            .lib-css(width, 50%);
-            &:first-child {
-                .lib-css(padding-right, 25px);
+        .sg-promo {
+            .row {
+                flex-wrap: nowrap;
             }
-            &:last-child {
-                .lib-css(padding-left, 25px);
+            .col {
+                &:first-child {
+                    .lib-css(padding-right, 10px);
+                }
+                &:last-child {
+                    .lib-css(padding-left, 10px);
+                }
             }
-            .sg-promo {
-                .col {
-                    &:first-child {
-                        .lib-css(padding-right, 10px);
-                    }
-                    &:last-child {
-                        .lib-css(padding-left, 10px);
-                    }
+        }
+    }
+    .style-guide-heading {
+        .sg-heading-text {
+            flex-wrap: nowrap;
+        }
+        .sg-theme-name {
+            padding: 17px 0;
+            padding-right: 50px;
+            border-right: 1px solid @color-red16;
+            border-bottom: none;
+        }
+        .sg-page-name {
+            width: fit-content;
+            padding-left: 70px;
+        }
+    }
+}
+@media screen and (min-width: @screen__l) {
+    .style-guide {
+        &.row {
+            flex-wrap: nowrap;
+            .col {
+                .lib-css(width, 50%);
+                &:first-child {
+                    .lib-css(padding-right, 25px);
+                }
+                &:last-child {
+                    .lib-css(padding-left, 25px);
+                }
+            }
+        }
+        .sg-promo {
+            .row {
+                flex-wrap: wrap;
+            }
+            .col {
+                width: 100%;
+                &:first-child {
+                    .lib-css(padding-right, 15px);
+                }
+                &:last-child {
+                    .lib-css(padding-left, 15px);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: @screen__xl) {
+    .style-guide {
+        .sg-promo {
+            .row {
+                flex-wrap: nowrap;
+            }
+            .col {
+                width: 50%;
+                &:first-child {
+                    .lib-css(padding-right, 10px);
+                }
+                &:last-child {
+                    .lib-css(padding-left, 10px);
                 }
             }
         }
