@@ -238,12 +238,12 @@ explicabo.
 <div class="sg-promo">
 <div class="row">
 <div class="col">
-<div class="promo-block-container">
+<div class="promo-block">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
 </div>
 </div>
 <div class="col">
-<div class="promo-block-container hover">
+<div class="promo-block hover">
 {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="19"}}
 </div>
 </div>

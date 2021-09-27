@@ -1,4 +1,0 @@
-<div class="promo-block">
-<div class="promo-img"><img src="{{media url="wysiwyg/promotion/promopic1.jpg"}}" alt=""></div>
-<a href="https://www.google.com/">SHOP OUTDOOR LOUNGES</a>
-</div>

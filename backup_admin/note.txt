@@ -1,2 +1,2 @@
 1. sg-cms-content.txt containt content for cms page name "Style Guide" with url key = "style-guide"
-2. promo-block.txt containt content for cms block name "Promotion block 1" with id = "block_promo1"
+2. create a cms block name "Promotion block 1" with id = "block_promo1" containt 1 image and 1 <a> link
