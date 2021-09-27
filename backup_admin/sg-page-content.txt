@@ -97,9 +97,9 @@
 <p class="style-guide-title">Input Fields</p>
 <div class="input-select-dropdown sg-input-field">
 <select name="" id="" class="select">
-<option value="0">1</option>
-<option value="1">2</option>
-<option value="2">3</option>
+<option value="0">Dropdown field</option>
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
 </select>
 </div>
 <div class="sg-input-field"><input class="input-text" type="text" value="Text field" /></div>
