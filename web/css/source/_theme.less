@@ -18,31 +18,26 @@
 //  Fonts
 @icons__font-path: "@{baseDir}fonts/Luma-Icons";
 @icons__font-name: "luma-icons";
-/* @icon-font__color: @color-gray-middle6;
-@icon-font__color-hover: @color-black-dark6;
-@icon-font__color-active: @color-black-dark6; */
 @font-size-ratio__base: 1.3;
-@line-height__base: 1.538461538;
-
-//  Custom Fonts
-@font-dejavusansbook-regular: "DejaVuSansBook-Regular";
-@font-helveticalight-regular: "HelveticaLight-Regular";
-@font-lora-regular: "Lora-Regular";
-@font-roboto-bold: "Roboto-Bold";
-@font-roboto-regular: "Roboto-Regular";
-@font-roboto-medium: "Roboto-Medium";
+@font-dejavusansbook: "DejaVuSans Book";
+@font-helveticalight: "Helvetica Light";
+@font-lora: "Lora";
+@font-roboto: "Roboto";
 
 //  Color nesting
 @panel__background-color: @color-gray-light8;
 @border-color__base: @color-gray89;
 
 //  Headings
-@heading__font-family__base: @font-lora-regular;
+@heading__font-family__base: @font-lora;
+@heading__font-weight__base: @font-weight__regular;
+@heading__line-height__base: 42px;
 @h1__font-size: 32px;
 @h2__font-size: 24px;
 @h3__font-size: 18px;
 @h4__font-size: 15px;
-@h4__font-family: @font-roboto-bold;
+@h4__font-family: @font-roboto;
+@h4__font-weight: @font-weight__bold;
 
 //  Links
 @link__color: @color-black-dark3;
@@ -93,7 +88,7 @@
 @tab-control__margin-right: -1px;
 @tab-control__padding-top: 1px;
 @tab-control__padding-right: 35px;
-@tab-control__font-family: @font-roboto-bold;
+@tab-control__font-family: @font-roboto;
 @tab-control__active__color: @color-black-dark4;
 
 //  Tabs content
@@ -134,14 +129,20 @@
 @button__shadow-active: false;
 
 //  Default = secondary button
-@button__background: @color-gray-darken0;
-@button__border: 1px solid @border-color__base;
-@button__hover__color: @button__color;
-@button__hover__background: darken(@button__background, 5%);
-@button__active__background: @color-gray-darken1;
+@button__color: @color-white;
+@button__background: @color-green1;
+@button__border: 2px solid @color-green1;
+@button__hover__color: @color-white;
+@button__hover__background: @color-green2;
+@button__hover__border: 2px solid @color-green2;
+@button__active__color: @color-white;
+@button__active__background: @color-green2;
+@button__active__border: 2px solid @color-green2;
+@button__line-height: 22px;
+@button__padding: 7px 50px;
 
 //  Primary button
-@button-primary__font-family: @font-roboto-bold;
+@button-primary__font-family: @font-roboto;
 @button-primary__padding: 7px 35px;
 @button-primary__line-height: 22px;
 @button-primary__color: @color-black-dark1;
@@ -181,7 +182,7 @@
 @message__line-height: false;
 @message-icon__font-size: 0;
 @message-icon__inner-padding-left: @indent__base;
-@message__font-family: @font-roboto-medium;
+@message__font-family: @font-roboto;
 @message__font-size: 15px;
 @message__line-height: 1.6em;
 @message__border-width: 1px;
@@ -212,8 +213,6 @@
 
 //  Select
 @select__background: @form-element-input__background url("../images/select-bg.svg") no-repeat 100% 45%;
-@select__border: 1px solid @border-color__base;
-@select__height: 32px;
 @select__padding: 4px 25px @indent__xs @indent__s;
 
 //  Form fieldset

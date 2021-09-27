@@ -12,7 +12,7 @@
 <div class="sg-buttons">
 <p class="style-guide-title">Buttons</p>
 <div class="sg-btn">
-<button class="action primary" id="product-addtocart-button">ADD TO CART</button>
+<button class="action secondary">ADD TO CART</button>
 <button class="action primary">STANDARD</button>
 <div class="qty-block">
 <span class="ipn-step-down"><i class="far fa-minus"></i></span>
@@ -21,7 +21,7 @@
 </div>
 </div>
 <div class="sg-btn-hover">
-<button class="action primary hover" id="product-addtocart-button-hover">ADD TO CART</button>
+<button class="action secondary hover">ADD TO CART</button>
 <button class="action primary hover">STANDARD</button>
 <div class="qty-block">
 <span class="ipn-step-down"><i class="far fa-minus"></i></span>
@@ -96,25 +96,11 @@
 <div class="sg-inputs">
 <p class="style-guide-title">Input Fields</p>
 <div class="input-select-dropdown sg-input-field">
-<span
-class="action toggle"
-data-toggle="dropdown"
-aria-haspopup="true"
-data-mage-init='{"dropdown":{}}'
->
-<span>Dropdown field</span>
-</span>
-<ul class="dropdown-options">
-<li>
-<span class="item">One</span>
-</li>
-<li>
-<span class="item">Two</span>
-</li>
-<li>
-<span class="item">Three</span>
-</li>
-</ul>
+<select name="" id="" class="select">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select>
 </div>
 <div class="sg-input-field"><input class="input-text" type="text" value="Text field" /></div>
 <div class="sg-input-field">

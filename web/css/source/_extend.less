@@ -1,6 +1,9 @@
 & when (@media-common = true) {
     /* #region common */
 
+    body {
+        line-height: 20px;
+    }
     .row {
         display: -ms-flexbox;
         display: flex;
@@ -15,11 +18,12 @@
         padding-left: 15px;
     }
     .style-guide-title {
-        .lib-css(color, @color-gray-darken0);
-        .lib-css(font-family, @font-helveticalight-regular);
-        .lib-css(font-size, 30px);
-        .lib-css(margin-top, 70px);
-        .lib-css(margin-bottom, 20px);
+        color: @color-gray-darken0;
+        font-family: @font-helveticalight;
+        font-weight: @font-weight__regular;
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 20px;
     }
     .style-guide-heading {
         background-color: @color-red14;
@@ -38,7 +42,8 @@
             padding: 17px 20px;
             border-bottom: 1px solid @color-red16;
             font-size: 38px;
-            font-family: @font-roboto-bold;
+            font-family: @font-roboto;
+            font-weight: @font-weight__bold;
             letter-spacing: -1px;
             display: flex;
             flex-direction: column;
@@ -51,7 +56,8 @@
                 }
             }
             span {
-                font-family: @font-roboto-regular;
+                font-family: @font-roboto;
+                font-weight: @font-weight__regular;
                 font-size: 13px;
                 line-height: 13px;
                 letter-spacing: 2.2px;
@@ -68,65 +74,30 @@
             text-align: center;
             width: 100%;
             font-size: 30px;
-            font-family: @font-helveticalight-regular;
+            font-family: @font-helveticalight;
+            font-weight: @font-weight__regular;
         }
     }
 
     /* #endregion */
 
     /* #region buttons */
-    .action.primary.hover {
-        .lib-css(color, @color-white);
-        .lib-css(background-color, @color-black-dark1);
-    }
-    #product-addtocart-button {
-        .lib-button(
-            @_button-color: @color-white,
-            @_button-background: @color-green1,
-            @_button-line-height: 26px,
-            @_button-border: none,
-            @_button-display: block,
-            @_button-width: 100%,
-            @_button-background-hover: @color-green2,
-            @_button-color-hover: @color-white,
-            @_button-border-hover: none,
-            @_button-background-active: @color-green2,
-            @_button-color-active: @color-white,
-            @_button-border-active: none
-        );
-    }
-    #product-addtocart-button-hover {
-        .lib-button(
-            @_button-color: @color-white,
-            @_button-background: @color-green2,
-            @_button-line-height: 26px,
-            @_button-border: none,
-            @_button-width: 180px,
-            @_button-background-hover: @color-green2,
-            @_button-color-hover: @color-white,
-            @_button-border-hover: none,
-            @_button-background-active: @color-green2,
-            @_button-color-active: @color-white,
-            @_button-border-active: none
-        );
-    }
-
     input[type="number"].qty {
-        .lib-css(width, 40px);
-        .lib-css(text-align-last, center);
-        .lib-css(display, inline-block);
-        .lib-css(vertical-align, bottom);
+        width: 40px;
+        text-align-last: center;
+        display: inline-block;
+        vertical-align: bottom;
     }
     span.ipn-step-up,
     span.ipn-step-down {
-        .lib-css(cursor, pointer);
-        .lib-css(display, inline-block);
-        .lib-css(width, 38px);
-        .lib-css(height, 38px);
-        .lib-css(border, 1px solid @color-gray89);
-        .lib-css(line-height, 38px);
-        .lib-css(text-align, center);
-        .lib-css(color, @color-gray96);
+        cursor: pointer;
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border: 1px solid @color-gray89;
+        line-height: 38px;
+        text-align: center;
+        color: @color-gray96;
         /* disable select text */
         -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
@@ -135,34 +106,35 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none;
         &:hover {
-            .lib-css(background-color, @color-white-fog);
+            background-color: @color-white-fog;
         }
     }
     span.ipn-step-up {
-        .lib-css(border-left, none);
-        .lib-css(margin-left, -3px);
+        border-left: none;
+        margin-left: -4px;
     }
     span.ipn-step-down {
-        .lib-css(border-right, none);
-        .lib-css(margin-right, -4px);
+        border-right: none;
+        margin-right: -4px;
     }
     .qty-block {
         display: inline-block;
     }
     .sg-buttons {
-        .action.primary {
+        .action.primary,
+        .action.secondary {
             margin-right: 6px;
             margin-bottom: 9px;
         }
-        #product-addtocart-button,
-        #product-addtocart-button-hover {
-            display: inline-block;
-            width: 180px;
-            margin-right: 6px;
-            margin-bottom: 9px;
+        .action.primary.hover {
+            color: @color-white;
+            background-color: @color-black-dark1;
+        }
+        .action.secondary.hover {
+            background-color: @color-green2;
         }
         .sg-btn-hover span.ipn-step-up {
-            .lib-css(background-color, @color-white-fog);
+            background-color: @color-white-fog;
         }
         .qty-block {
             margin-bottom: 9px;
@@ -176,7 +148,7 @@
 
     /* #region checkbox radio */
     input[type="checkbox"] {
-        .lib-css(top, 0);
+        top: 0;
     }
     //  CUSTOM CHECKBOX
     /* The checkbox container */
@@ -340,40 +312,10 @@
 
     /* #region input */
 
-    .input-select-dropdown {
-        .lib-dropdown(
-            @_toggle-selector : ~".action.toggle",
-            @_options-selector : ~"ul.dropdown-options"
-        );
-        .lib-css(display, block);
-    }
-
-    .action.toggle[data-toggle="dropdown"] {
-        height: @form-element-input__height;
-        line-height: @form-element-input__height;
-        border: 1px solid @color-gray-middle1;
-        padding: 0 9px;
-        padding-right: 32px;
-        &::after {
-            position: absolute;
-            top: 50%;
-            right: 15px;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
-    }
-
     .sg-inputs {
         div {
             margin-bottom: 10px;
             max-width: 320px;
-        }
-        .input-selected {
-            box-shadow: 0 0 3px 1px @color-gray-middle1;
-        }
-        .action.toggle[data-toggle="dropdown"] {
-            display: block;
         }
     }
 
@@ -387,7 +329,8 @@
             margin-right: 0;
         }
         h3 {
-            font-family: @font-roboto-medium;
+            font-family: @font-roboto;
+            font-weight: @font-weight__heavier;
         }
     }
 
@@ -407,7 +350,7 @@
         margin-top: 50px;
     }
     a.sg-link-hover {
-        .lib-css(color, @color-gray97);
+        color: @color-gray97;
     }
 
     /* #endregion */
@@ -415,9 +358,9 @@
     /* #region misc */
 
     a.icon {
-        .lib-css(color, @color-black-dark5);
+        color: @color-black-dark5;
         &:hover {
-            .lib-css(color, @color-black);
+            color: @color-black;
         }
     }
     .minicart-wrapper .action.close {
@@ -432,7 +375,7 @@
         a.icon {
             margin-right: 15px;
             &.hover {
-                .lib-css(color, @color-black);
+                color: @color-black;
             }
         }
         .minicart-wrapper {
@@ -484,7 +427,8 @@
             white-space: nowrap;
             .lib-link-as-button();
             .lib-button(
-                @_button-font-family: @font-roboto-bold,
+                @_button-font-family: @font-roboto,
+                @_button-font-weight: @font-weight__bold,
                 @_button-font-size: 15px,
                 @_button-cursor: @button__cursor,
                 @_button-display: @button__display,
@@ -532,10 +476,10 @@
             }
             .col {
                 &:first-child {
-                    .lib-css(padding-right, 10px);
+                    padding-right: 10px;
                 }
                 &:last-child {
-                    .lib-css(padding-left, 10px);
+                    padding-left: 10px;
                 }
             }
         }
@@ -561,12 +505,12 @@
         &.row {
             flex-wrap: nowrap;
             .col {
-                .lib-css(width, 50%);
+                width: 50%;
                 &:first-child {
-                    .lib-css(padding-right, 25px);
+                    padding-right: 25px;
                 }
                 &:last-child {
-                    .lib-css(padding-left, 25px);
+                    padding-left: 25px;
                 }
             }
         }
@@ -577,10 +521,10 @@
             .col {
                 width: 100%;
                 &:first-child {
-                    .lib-css(padding-right, 15px);
+                    padding-right: 15px;
                 }
                 &:last-child {
-                    .lib-css(padding-left, 15px);
+                    padding-left: 15px;
                 }
             }
         }
@@ -595,10 +539,10 @@
             .col {
                 width: 50%;
                 &:first-child {
-                    .lib-css(padding-right, 10px);
+                    padding-right: 10px;
                 }
                 &:last-child {
-                    .lib-css(padding-left, 10px);
+                    padding-left: 10px;
                 }
             }
         }
