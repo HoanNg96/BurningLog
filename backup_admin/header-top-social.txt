@@ -1,0 +1,2 @@
+<a href="{{customVar code=shop_facebook_link}}"><i class="fab fa-facebook-f"></i></a>
+<a href="{{customVar code=shop_instagram_link}}"><i class="fab fa-instagram"></i></a>

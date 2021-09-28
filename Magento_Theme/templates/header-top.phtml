@@ -21,3 +21,16 @@
         ?>
     </ul>
 </div>
+
+<div class="header-top-social">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header_top_social')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="header-top-blog">
+    <a href="#">Blog</a>
+</div>
