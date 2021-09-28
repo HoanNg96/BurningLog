@@ -10,3 +10,14 @@
         ?>
     </a>
 </div>
+
+<div class="header-top-desktop-center">
+    <ul>
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('header_top_list_link')
+            ->toHtml();
+        ?>
+    </ul>
+</div>

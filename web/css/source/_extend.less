@@ -456,11 +456,11 @@
 
     /* #region header */
 
-    .header-top-desktop-left {
-        display: inline-block;
-        p {
-            margin-bottom: 0;
-        }
+    .panel.header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: @color-white;
         a {
             color: @color-white;
             display: inline-block;
@@ -468,6 +468,41 @@
                 color: @color-white;
             }
         }
+        p {
+            color: @color-white;
+            margin-bottom: 0;
+        }
+    }
+    .header-top-desktop-left {
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .header-top-desktop-center {
+        width: 100%;
+        padding: 0 30px;
+        text-align: center;
+        ul {
+            margin-bottom: 0;
+            padding: 0;
+        }
+        p {
+            display: inline-block;
+            &::before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: @color-white;
+                display: inline-block;
+                margin: 0 10px 2px 6px;
+            }
+            &:first-child::before {
+                display: none;
+            }
+        }
+    }
+    .header.links {
+        white-space: nowrap;
     }
 
     /* #end header */
