@@ -94,6 +94,34 @@
     .page-header {
         border-bottom: none;
     }
+    .block-search .action.search {
+        height: 40px;
+        &::before {
+            color: @color-black;
+        }
+    }
+    .minicart-wrapper .action.showcart {
+        &:before {
+            content: "\f07a";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            color: @color-black;
+            font-size: 20px;
+        }
+        .counter-number {
+            color: @color-white;
+            text-shadow: none;
+            &::before {
+                content: "(";
+            }
+            &::after {
+                content: ")";
+            }
+        }
+    }
+    #search::placeholder {
+        color: @color-gray60;
+    }
 
     /* #endregion */
 }
@@ -117,15 +145,18 @@
         ul {
             display: flex;
             padding: 0;
-            li {
-                margin: 0 40px 0 0;
-                &:last-child {
-                    margin: 0;
-                }
-                a {
-                    display: inline-block;
-                    padding: 20px 0;
-                }
+        }
+        .level0 {
+            text-transform: uppercase;
+            margin: 0 40px 0 0;
+            &:last-child {
+                margin: 0;
+            }
+            & > .level-top {
+                display: inline-block;
+                padding: 20px 0;
+                line-height: 14px;
+                color: @color-black;
             }
         }
     }
@@ -141,6 +172,43 @@
             a {
                 display: block;
             }
+        }
+    }
+    .block-search .action.search {
+        height: 40px;
+        &::before {
+            color: @color-black;
+        }
+        &[disabled] {
+            opacity: 1;
+        }
+    }
+    .minicart-wrapper {
+        margin-left: 30px;
+    }
+    .minicart-wrapper .action.showcart {
+        display: inline-flex;
+        height: 40px;
+        align-items: center;
+        &:before {
+            color: @color-red17;
+        }
+        .counter-number {
+            color: @color-red17;
+            text-shadow: none;
+            font-family: @font-roboto;
+            font-weight: @font-weight__bold;
+            &::before {
+                content: "Cart (";
+            }
+            &::after {
+                content: ")";
+            }
+        }
+        .counter.qty {
+            background-color: transparent;
+            padding: 0;
+            margin-left: 10px;
         }
     }
 }
