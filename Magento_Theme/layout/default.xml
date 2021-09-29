@@ -10,7 +10,6 @@
     <body>
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Template" name="header.top" before="-" template="Magento_Theme::header-top.phtml" />
-            <referenceBlock name="header" remove="true" />
             <referenceBlock name="register-link" remove="true" />
         </referenceContainer>
     </body>
