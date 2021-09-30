@@ -22,14 +22,22 @@
     }
     .header-top-desktop-left {
         white-space: nowrap;
-        font-family: @font-roboto;
-        font-weight: @font-weight__heavier;
-        font-size: 14px;
-        a {
-            margin: 0 15px 0 0;
+        p {
+            display: inline-block;
+            white-space: nowrap;
+            font-family: @font-roboto;
+            font-weight: @font-weight__heavier;
+            font-size: 14px;
+            a {
+                margin: 0 15px 0 0;
+            }
+        }
+        .contact-text {
+            display: none;
         }
     }
     .header-top-desktop-center {
+        display: none;
         width: 100%;
         padding: 0 15px;
         text-align: center;
@@ -57,13 +65,17 @@
         }
     }
     .header.panel > .header.links {
+        display: none;
         white-space: nowrap;
         margin-right: 0;
-        display: flex;
         align-items: center;
         justify-content: flex-end;
+        /* & > li {
+            margin-bottom: 0;
+        } */
     }
     .header-top-social {
+        display: none;
         white-space: nowrap;
         a {
             margin: 0 0 0 8px;
@@ -73,6 +85,7 @@
         }
     }
     .header-top-blog {
+        display: none;
         a {
             margin: 0 0 0 15px;
         }
@@ -118,6 +131,9 @@
                 content: ")";
             }
         }
+        .counter.qty.empty {
+            display: inline-block;
+        }
     }
     #search::placeholder {
         color: @color-gray60;
@@ -126,6 +142,24 @@
     /* #endregion */
 }
 @media screen and (min-width: @screen__m) {
+    .header-top-social,
+    .header-top-blog {
+        display: block;
+    }
+    .header.panel > .header.links {
+        display: flex;
+    }
+    .header-top-desktop-center {
+        display: block;
+    }
+    .header-top-desktop-left {
+        .contact-text {
+            display: inline-block;
+        }
+        .phone-icon {
+            display: none;
+        }
+    }
     .header.content {
         padding-left: 0;
         padding-right: 0;
@@ -209,6 +243,31 @@
             background-color: transparent;
             padding: 0;
             margin-left: 10px;
+        }
+    }
+    .header.panel > .header.links {
+        & > .authorization-link {
+            margin: 0;
+        }
+        & > li.welcome {
+            line-height: inherit;
+        }
+    }
+    .customer-welcome {
+        ul {
+            background-color: @color-gray-middle1;
+            &::before {
+                border-color: transparent transparent @color-gray-middle1 transparent;
+            }
+            li:hover {
+                background-color: @color-gray64;
+            }
+        }
+        .customer-menu a {
+            color: @color-black_dark;
+            &:hover {
+                color: @color-white;
+            }
         }
     }
 }

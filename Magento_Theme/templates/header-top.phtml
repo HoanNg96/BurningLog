@@ -1,17 +1,14 @@
 <div class="header-top-desktop-left">
-    Contact us / <a href="tel:+">
-        <?= $block->getLayout()
-            ->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('header_contact_us')
-            ->toHtml();
-        ?>
-    </a>
+    <?php echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header_top_left')
+        ->toHtml();
+    ?>
 </div>
 
 <div class="header-top-desktop-center">
     <ul>
-        <?php
-        echo $block->getLayout()
+        <?php echo $block->getLayout()
             ->createBlock('Magento\Cms\Block\Block')
             ->setBlockId('header_top_list_link')
             ->toHtml();
@@ -20,8 +17,7 @@
 </div>
 
 <div class="header-top-social">
-    <?php
-    echo $block->getLayout()
+    <?php echo $block->getLayout()
         ->createBlock('Magento\Cms\Block\Block')
         ->setBlockId('header_top_social')
         ->toHtml();

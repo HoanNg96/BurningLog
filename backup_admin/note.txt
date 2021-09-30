@@ -2,8 +2,8 @@
     content in file "sg-page-content.txt"
 2. create a cms block name "Promotion block 1" with id = "block_promo1"
     content containt 1 image and 1 <a> link
-3. create a block name "Header Contact Us" with id = "header_contact_us"
-    content = "Contact us / 1300 660 330"
+3. create a block name "Header Top Left" with id = "header_top_left"
+    content in file "header-top-left.txt"
 4. create a block name "Header Top List Link" with id = "header_top_list_link"
     content in file "header-top-list-link.txt"
 5. create 2 variable

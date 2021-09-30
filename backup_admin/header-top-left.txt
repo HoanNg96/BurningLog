@@ -1,0 +1,3 @@
+<p class="phone-icon"><em class="fas fa-phone-alt">&nbsp;</em></p>
+<p class="contact-text">Contact Us /&nbsp;</p>
+<p><a href="#">1300 660 330</a></p>
