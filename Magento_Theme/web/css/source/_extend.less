@@ -1,6 +1,8 @@
-@header-panel__background-color: @color-black-dark7;
-
 & when (@media-common = true) {
+    .page-header .panel.wrapper {
+        background-color: @color-black-dark8;
+        border: none;
+    }
     .panel.header {
         display: flex;
         align-items: center;
@@ -24,9 +26,6 @@
         p {
             display: inline-block;
             white-space: nowrap;
-            font-family: @font-roboto;
-            font-weight: @font-weight__heavier;
-            font-size: 14px;
             a {
                 margin: 0 15px 0 0;
             }
@@ -40,7 +39,6 @@
         width: 100%;
         padding: 0 15px;
         text-align: center;
-        font-family: @font-roboto;
         font-weight: @font-weight__heavier;
         font-size: 14px;
         ul {
@@ -60,6 +58,9 @@
             }
             &:first-child::before {
                 display: none;
+            }
+            &:hover {
+                font-weight: 700;
             }
         }
     }
@@ -144,7 +145,6 @@
     }
     .navigation {
         .level0 > .level-top {
-            font-family: @font-roboto;
             font-size: 12px;
             font-weight: @font-weight__heavier;
         }
@@ -159,6 +159,7 @@
         float: none;
         position: absolute;
         right: 15px;
+        top: 15px;
         .block-minicart {
             right: 0;
         }
@@ -198,8 +199,6 @@
             border-radius: 9px;
             padding: 0;
             font-size: 11px;
-            font-family: @font-roboto;
-            font-weight: @font-weight__regular;
         }
         .counter.qty.empty {
             display: inline-block;
@@ -218,6 +217,20 @@
         height: 43px;
         border: 1px solid @color-gray98;
         text-align: center;
+        &:before {
+            color: @color-black;
+            content: "\f0c9";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 16px;
+            margin-top: 7px;
+            margin-bottom: 3px;
+        }
+        &::after {
+            content: "Menu";
+            font-size: 10px;
+        }
     }
     .logo {
         margin: 0 auto;
@@ -227,13 +240,53 @@
             margin: 0 auto;
         }
     }
+    .header-top-mobile-left {
+        .icon {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+    #store-list-mobile {
+        border: none;
+        height: 30px;
+        font-size: 13px;
+        color: @color-white;
+        background-color: @color-black-dark8;
+        max-width: 160px;
+        padding: 0 9px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: -6px;
+        &:focus {
+            box-shadow: unset;
+        }
+        option {
+            background-color: @color-white;
+            color: @color-black-dark8;
+        }
+    }
 }
 
 //
 //  Responsive
 //
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .nav-toggle {
+        top: 10px;
+    }
+    .minicart-wrapper {
+        top: 10px;
+    }
+}
 
 @media screen and (min-width: @screen__m) {
+    .page-header .panel.wrapper {
+        background-color: @color-black-dark7;
+    }
+    .nav-sections {
+        margin-bottom: 10px;
+        border-bottom: 1px solid @color-gray89;
+    }
     .header-top-social,
     .header-top-blog {
         display: block;
@@ -248,8 +301,12 @@
         .contact-text {
             display: inline-block;
         }
-        .phone-icon {
+        .icon {
             display: none;
+        }
+        p {
+            font-weight: @font-weight__heavier;
+            font-size: 14px;
         }
     }
     .header.content {
@@ -284,9 +341,16 @@
             &:last-child {
                 margin: 0;
             }
+            &.active > .level-top {
+                border: none;
+                color: @color-red17;
+            }
+            &:hover > .level-top {
+                color: @color-red17;
+            }
             & > .level-top {
                 display: inline-block;
-                padding: 20px 10px;
+                padding: 10px;
                 line-height: 14px;
                 color: @color-black;
             }
@@ -308,6 +372,7 @@
     }
     .minicart-wrapper {
         float: right;
+        top: 0;
         margin-left: 30px;
         position: relative;
     }
@@ -332,7 +397,6 @@
         .counter-number {
             color: @color-red17;
             text-shadow: none;
-            font-family: @font-roboto;
             font-weight: @font-weight__bold;
             &::before {
                 content: "Cart (";
@@ -381,6 +445,10 @@
         float: left;
         width: unset;
         max-width: 50%;
+        margin-bottom: 20px;
+    }
+    .header-top-mobile-left {
+        display: none;
     }
 }
 

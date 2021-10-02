@@ -12,5 +12,8 @@
             <block class="Magento\Framework\View\Element\Template" name="header.top" before="-" template="Magento_Theme::header-top.phtml" />
             <referenceBlock name="register-link" remove="true" />
         </referenceContainer>
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="footer.top" before="-" template="Magento_Theme::footer-top.phtml" />
+        </referenceContainer>
     </body>
 </page>

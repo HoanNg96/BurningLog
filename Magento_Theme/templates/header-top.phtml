@@ -1,4 +1,12 @@
-<div class="header-top-desktop-left">
+<div class="header-top-mobile-left">
+    <?php echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header_top_store_list_mobile')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="header-top-desktop-left header-top-mobile-right">
     <?php echo $block->getLayout()
         ->createBlock('Magento\Cms\Block\Block')
         ->setBlockId('header_top_left')
@@ -10,7 +18,7 @@
     <ul>
         <?php echo $block->getLayout()
             ->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('header_top_list_link')
+            ->setBlockId('header_top_store_list_desktop')
             ->toHtml();
         ?>
     </ul>
