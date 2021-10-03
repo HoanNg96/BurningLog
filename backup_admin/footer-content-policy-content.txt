@@ -1,0 +1,4 @@
+<p><a href="#">Term and conditions</a></p>
+<p><a href="#">Return policy</a></p>
+<p><a href="#">Delivery and pick up policy</a></p>
+<p>{{widget type="Magento\Cms\Block\Widget\Page\Link" template="widget/link/link_block.phtml" page_id="4"}}</p>

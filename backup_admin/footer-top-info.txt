@@ -1,0 +1,20 @@
+<div class="shipping">
+<a href="#">
+<i class="fas fa-truck">&nbsp;</i>we ship australia wide!
+</a>
+</div>
+<div class="store">
+<a href="#">
+<i class="fas fa-map-marker-alt">&nbsp;</i>find a store
+</a>
+</div>
+<div class="cashback">
+<a href="#">
+<i class="fas fa-dollar-sign">&nbsp;</i>money back guarantee
+</a>
+</div>
+<div class="contact">
+<a href="#">
+<i class="fas fa-envelope">&nbsp;</i>contact us
+</a>
+</div>

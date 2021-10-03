@@ -1,6 +1,6 @@
 1. create a cms page name "Style Guide" with url key = "style-guide"
     content in file "sg-page-content.txt"
-2. create a cms block name "Promotion block 1" with id = "block_promo1"
+2. create a block name "Promotion block 1" with id = "block_promo1"
     content containt 1 image and 1 <a> link
 3. create a block name "Header Top Left" with id = "header_top_left"
     content in file "header-top-left.txt"
@@ -11,3 +11,15 @@
     name "Shop Instagram Link" with id = "shop_instagram_link", value = shop instagram link
 6. create a block name "Header Top Social" with id = "header_top_social"
     content in file "header-top-social.txt"
+7. create a block name "Footer Top Showroom" with id = "footer_top_showroom"
+    content in file "footer-top-showroom.txt"
+8. create a block name "Footer Top Banner" with id = "footer_top_banner"
+    content in file "footer-top-banner.txt"
+9. create a block name "Footer Top Info" with id = "footer_top_info"
+    content in file "footer-top-info.txt"
+10. create a block name "Footer Content Category Content" with id = "footer_content_category_content"
+    content in file "footer-content-category-content.txt"
+11. create a block name "Footer Content Shop Info Content" with id = "footer_content_shop_info_content"
+    content in file "footer-content-shop-info-content.txt"
+12. create a block name "Footer Content Policy Content" with id = "footer_content_policy_content"
+    content in file "footer-content-policy-content.txt"

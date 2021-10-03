@@ -1,0 +1,14 @@
+<div class="footer-copyright">
+    <?php echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('copyright')
+        ->toHtml();
+    ?>
+</div>
+<div class="footer-payment-method">
+    <?php echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('payment_method')
+        ->toHtml();
+    ?>
+</div>

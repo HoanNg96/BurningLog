@@ -1,0 +1,100 @@
+<div class="footer-content-category">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_category_title')
+        ->toHtml();
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_category_content')
+        ->toHtml();
+    ?>
+</div>
+<div class="footer-content-shop-info">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_shop_info_title')
+        ->toHtml();
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_shop_info_content')
+        ->toHtml();
+    ?>
+</div>
+<div class="footer-content-policy">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('ooter_content_policy_title')
+        ->toHtml();
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_policy_content')
+        ->toHtml();
+    ?>
+</div>
+<div id="footer-content-accordion" data-mage-init='{
+        "accordion":{
+            "active": [0],
+            "collapsible": true,
+            "openedState": "active",
+            "multipleCollapsible": true
+        }}'>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <h4>
+                <?php echo $block->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('footer_content_category_title')
+                    ->toHtml();
+                ?>
+            </h4>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_category_content')
+            ->toHtml();
+        ?>
+    </div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <h4>
+                <?php echo $block->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('footer_content_shop_info_title')
+                    ->toHtml();
+                ?>
+            </h4>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_shop_info_content')
+            ->toHtml();
+        ?>
+    </div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <h4>
+                <?php echo $block->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('footer_content_policy_title')
+                    ->toHtml();
+                ?>
+            </h4>
+        </div>
+    </div>
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_policy_content')
+            ->toHtml();
+        ?>
+    </div>
+</div>

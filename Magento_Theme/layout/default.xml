@@ -14,6 +14,14 @@
         </referenceContainer>
         <referenceContainer name="footer-container">
             <block class="Magento\Framework\View\Element\Template" name="footer.top" before="-" template="Magento_Theme::footer-top.phtml" />
+            <referenceContainer name="footer">
+                <referenceBlock name="footer_links" remove="true" />
+                <block class="Magento\Framework\View\Element\Template" name="footer.links" before="-" template="Magento_Theme::footer-links.phtml" />
+            </referenceContainer>
+            <container name="footer.bottom" htmlTag="div" htmlClass="footer-bottom">
+                <block class="Magento\Framework\View\Element\Template" name="footer.bottom.content" before="-" template="Magento_Theme::footer-bottom.phtml" />
+            </container>
         </referenceContainer>
+        <referenceBlock name="copyright" remove="true" />
     </body>
 </page>
