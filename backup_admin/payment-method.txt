@@ -1,0 +1,5 @@
+<p><a href="#"><img src="{{media url="wysiwyg/footer/eWay.png"}}" alt=""></a></p>
+<p><a href="#"><img src="{{media url="wysiwyg/footer/paypal.png"}}" alt=""></a></p>
+<p><a href="#"><img src="{{media url="wysiwyg/footer/Visa.png"}}" alt=""></a></p>
+<p><a href="#"><img src="{{media url="wysiwyg/footer/Mastercard.png"}}" alt=""></a></p>
+<p><a href="#"><img src="{{media url="wysiwyg/footer/American-express.png"}}" alt=""></a></p>

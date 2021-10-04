@@ -3,6 +3,7 @@
 <h1 class="title">Exclusive outdoor furniture, online prices</h1>
 <p class="content">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-magna aliqua. <a href="#">Learn more</a>
+magna aliqua.<a href="#" class="web-link">Learn more</a>
 </p>
+<a href="#" class="web-link">Learn more</a>
 </div>

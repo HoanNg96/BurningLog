@@ -272,6 +272,98 @@
 
     /* #region footer */
 
+    /* #region footer showroom */
+    .footer-top-showroom {
+        display: flex;
+        padding: 30px 10px;
+        justify-content: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        .showroom-img {
+            display: none;
+        }
+        .showroom-button {
+            color: #424242;
+            max-width: 210px;
+            text-align: center;
+            button {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region footer banner */
+    .footer-top-banner {
+        position: relative;
+        max-width: 1600px;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        p {
+            margin-bottom: 0;
+        }
+        .banner-img {
+            height: 140px;
+        }
+        img {
+            object-fit: cover;
+            height: 140px;
+        }
+        .banner-content {
+            color: #fffefe;
+            position: absolute;
+            width: 85%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            z-index: 3;
+            h1 {
+                font-size: 24px;
+                line-height: 24px;
+                margin-bottom: 1rem;
+            }
+            a {
+                color: #fffefe;
+            }
+            .content {
+                display: none;
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region footer info */
+    .footer-top-info {
+        background: #f1f1f1;
+        .topinfo-container {
+            max-width: 1240px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            div {
+                width: 50%;
+                float: left;
+                box-sizing: border-box;
+                font-weight: 500;
+                font-size: 12px;
+                color: #2d2d2d;
+                line-height: 14px;
+                height: 80px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region footer content */
     .footer.content {
         display: flex;
         flex-direction: column;
@@ -291,7 +383,11 @@
     #footer-content-accordion {
         order: 2;
     }
+    /* #endregion */
 
+    /* #region footer bottom */
+
+    /* #endregion */
 
     /* #endregion */
 }
@@ -485,6 +581,12 @@
         display: none;
     }
 
+    /* #endregion */
+
+    /* #region footer */
+    .page-footer {
+        background: white;
+    }
     /* #endregion */
 }
 

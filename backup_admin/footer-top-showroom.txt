@@ -4,6 +4,6 @@
 <p>
 Maryborough St & Wollongong Street, Fyshwick ACT 2609<span>T: <a href="tel:+">1300 644 596</a></span>
 </p>
-<a href="#">View more info</a>
+<a href="#" class="web-link">View more info</a>
 </div>
 <p class="showroom-img"><img src="{{media url="wysiwyg/footer/webstore_logo.png"}}" alt=""></p>

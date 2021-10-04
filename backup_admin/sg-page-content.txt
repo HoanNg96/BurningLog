@@ -178,9 +178,9 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
 explicabo.
 <br /><br />
-<a href="#">Text link</a>
+<a href="#" class="web-link">Text link</a>
 <br />
-<a href="#" class="sg-link-hover">Text link hover</a>
+<a href="#" class="sg-link-hover web-link">Text link hover</a>
 </p>
 <h1>h1 Lora Regular - 32px</h1>
 <h2>h2 Lora Regular - 24px</h2>
