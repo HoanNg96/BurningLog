@@ -1,41 +1,41 @@
 .lib-font-face(
     @family-name: @font-dejavusansbook,
-    @font-path: "@{baseDir}fonts/DejaVuSansBook/regular/DejaVuSans",
+    @font-path: '@{baseDir}fonts/DejaVuSansBook/regular/DejaVuSans',
     @font-style: normal,
     @font-weight: @font-weight__regular
 );
 
 .lib-font-face(
     @family-name: @font-helveticalight,
-    @font-path: "@{baseDir}fonts/HelveticaLight/regular/HelveticaLight",
+    @font-path: '@{baseDir}fonts/HelveticaLight/regular/HelveticaLight',
     @font-style: normal,
     @font-weight: @font-weight__regular
 );
 
 .lib-font-face(
     @family-name: @font-lora,
-    @font-path: "@{baseDir}fonts/Lora/regular/Lora-Regular",
+    @font-path: '@{baseDir}fonts/Lora/regular/Lora-Regular',
     @font-style: normal,
     @font-weight: @font-weight__regular
 );
 
 .lib-font-face(
     @family-name: @font-roboto,
-    @font-path: "@{baseDir}fonts/Roboto/bold/Roboto-Bold",
+    @font-path: '@{baseDir}fonts/Roboto/bold/Roboto-Bold',
     @font-style: normal,
     @font-weight: @font-weight__bold
 );
 
 .lib-font-face(
     @family-name: @font-roboto,
-    @font-path: "@{baseDir}fonts/Roboto/regular/Roboto-Regular",
+    @font-path: '@{baseDir}fonts/Roboto/regular/Roboto-Regular',
     @font-style: normal,
     @font-weight: @font-weight__regular
 );
 
 .lib-font-face(
     @family-name: @font-roboto,
-    @font-path: "@{baseDir}fonts/Roboto/medium/Roboto-Medium",
+    @font-path: '@{baseDir}fonts/Roboto/medium/Roboto-Medium',
     @font-style: normal,
     @font-weight: @font-weight__heavier
 );
@@ -44,7 +44,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = "min") and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     h1 {
         .lib-css(font-size, @h1__font-size-desktop);
         .lib-css(margin-bottom, @h1__margin-bottom__desktop);

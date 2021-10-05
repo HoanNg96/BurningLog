@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
@@ -7,36 +8,44 @@
 /** @var \Magento\Newsletter\Block\Subscribe $block */
 ?>
 <div class="block newsletter">
-    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="title">
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter for the latest news and updates</p>
+    </div>
     <div class="content">
-        <form class="form subscribe"
-            novalidate
-            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
-            method="post"
-            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
-            id="newsletter-validate-detail">
+        <form class="form subscribe" novalidate action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
             <div class="field newsletter">
                 <div class="control">
                     <label for="newsletter">
                         <span class="label">
                             <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
                         </span>
-                        <input name="email" type="email" id="newsletter"
-                               placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
-                               data-mage-init='{"mage/trim-input":{}}'
-                               data-validate="{required:true, 'validate-email':true}"
-                        />
+                        <input name="email" type="email" id="newsletter" placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}" />
                     </label>
                 </div>
             </div>
             <div class="actions">
-                <button class="action subscribe primary"
-                        title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
-                        type="submit"
-                        aria-label="Subscribe">
-                    <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit" aria-label="Subscribe">
+                    <span><i class="fas fa-chevron-right"></i></span>
                 </button>
             </div>
         </form>
+    </div>
+    <div class="social">
+        <a href="#" class="icon">
+            <span><i class="fab fa-facebook-f"></i></span>
+        </a>
+        <a href="#" class="icon">
+            <span><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="#" class="icon">
+            <span><i class="fab fa-twitter"></i></span>
+        </a>
+        <a href="#" class="icon">
+            <span><i class="fab fa-youtube"></i></span>
+        </a>
+        <a href="#" class="icon">
+            <span><i class="fab fa-pinterest"></i></span>
+        </a>
     </div>
 </div>

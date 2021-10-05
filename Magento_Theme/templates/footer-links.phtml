@@ -36,20 +36,16 @@
 </div>
 <div id="footer-content-accordion" data-mage-init='{
         "accordion":{
-            "active": [0],
-            "collapsible": true,
-            "openedState": "active",
-            "multipleCollapsible": true
+            "active": false,
+            "collapsible": true
         }}'>
     <div data-role="collapsible">
         <div data-role="trigger">
-            <h4>
-                <?php echo $block->getLayout()
-                    ->createBlock('Magento\Cms\Block\Block')
-                    ->setBlockId('footer_content_category_title')
-                    ->toHtml();
-                ?>
-            </h4>
+            <?php echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('footer_content_category_title')
+                ->toHtml();
+            ?>
         </div>
     </div>
     <div data-role="content">
@@ -62,13 +58,11 @@
 
     <div data-role="collapsible">
         <div data-role="trigger">
-            <h4>
-                <?php echo $block->getLayout()
-                    ->createBlock('Magento\Cms\Block\Block')
-                    ->setBlockId('footer_content_shop_info_title')
-                    ->toHtml();
-                ?>
-            </h4>
+            <?php echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('footer_content_shop_info_title')
+                ->toHtml();
+            ?>
         </div>
     </div>
     <div data-role="content">
@@ -81,13 +75,11 @@
 
     <div data-role="collapsible">
         <div data-role="trigger">
-            <h4>
-                <?php echo $block->getLayout()
-                    ->createBlock('Magento\Cms\Block\Block')
-                    ->setBlockId('footer_content_policy_title')
-                    ->toHtml();
-                ?>
-            </h4>
+            <?php echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('footer_content_policy_title')
+                ->toHtml();
+            ?>
         </div>
     </div>
     <div data-role="content">
