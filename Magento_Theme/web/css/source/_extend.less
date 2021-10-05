@@ -511,7 +511,10 @@
     .social {
         text-align: center;
         a {
-            margin: 0 15px;
+            margin: 0 30px 0 0;
+            &:last-child {
+                margin-right: 0;
+            }
         }
         i {
             font-size: 18px;
@@ -570,13 +573,12 @@
 
 @media screen and (min-width: @screen__m) {
     /* #region header */
-
     .page-header .panel.wrapper {
         background-color: @color-black-dark7;
     }
     .nav-sections {
         margin-bottom: 10px;
-        border-bottom: 1px solid @color-gray89;
+        border-bottom: 1px solid #ddd;
     }
     .header-top-social,
     .header-top-blog {
@@ -749,13 +751,17 @@
 
     .page-footer {
         background: white;
+        padding-bottom: 0;
     }
     /* #region showroom */
     .footer-top-showroom {
+        box-sizing: border-box;
         justify-content: space-between;
         .showroom-img {
-            display: block;
+            display: flex;
             width: 38.8888%;
+            justify-content: center;
+            align-items: center;
         }
     }
     /* #endregion */
@@ -768,11 +774,35 @@
         img {
             height: 280px;
         }
+        .banner-content {
+            .title {
+                font-size: 38px;
+                line-height: 32px;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+            .content {
+                display: block;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                margin: 0 auto;
+                width: 60%;
+                a {
+                    display: inline;
+                }
+            }
+            a {
+                display: none;
+            }
+        }
     }
     /* #endregion */
+
     /* #region footer info */
     .footer-top-info {
         .topinfo-container {
+            box-sizing: border-box;
             div {
                 width: 25%;
             }
@@ -788,6 +818,86 @@
     .footer-content-shop-info,
     .footer-content-policy {
         display: block;
+    }
+    .footer.content {
+        text-align: left;
+        flex-direction: row;
+        h3 {
+            line-height: 25px;
+        }
+        .block {
+            float: unset;
+        }
+        .widget.block,
+        p {
+            margin: 0;
+        }
+        .footer-content-category,
+        .footer-content-shop-info {
+            width: 27.7777%;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+        .footer-content-policy,
+        .block.newsletter {
+            width: 22.2222%;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+        .block.newsletter {
+            padding-right: 0;
+        }
+        .title {
+            text-align: left;
+            p {
+                margin: 0;
+                width: 90%;
+            }
+        }
+        .social {
+            text-align: left;
+            a {
+                margin: 0 15px 0 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region footer bottom */
+    .footer-bottom-container {
+        height: 95px;
+        box-sizing: border-box;
+        .footer-copyright {
+            border-top: 1px solid #ddd;
+            order: 1;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            p {
+                margin: 0;
+            }
+        }
+        .footer-payment-method {
+            border-top: 1px solid #ddd;
+            order: 2;
+            width: 50%;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            p {
+                margin: 0;
+                &:first-child {
+                    display: inline-block;
+                }
+            }
+        }
     }
     /* #endregion */
 
