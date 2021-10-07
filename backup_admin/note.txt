@@ -1,7 +1,7 @@
 1. create a cms page name "Style Guide" with url key = "style-guide"
     content in file "sg-page-content.html"
 2. create a block name "Promotion block 1" with id = "block_promo1"
-    content containt 1 image and 1 <a class="button-third"> link
+    content in file "promo-bock.html"
 3. create a block name "Header Top Left" with id = "header_top_left"
     content in file "header-top-left.html"
 4. create a block name "Header Top List Link" with id = "header_top_list_link"

@@ -168,6 +168,10 @@
         .sg-btn-hover input {
             vertical-align: bottom;
         }
+        .action,
+        .qty-block {
+            display: block;
+        }
     }
     /* #endregion */
 
@@ -419,6 +423,8 @@
             margin-left: 15px;
             margin-right: 15px;
             margin-top: 0;
+            position: relative;
+            top: 0;
             .action.close,
             .action.close.hover {
                 top: 3px;
@@ -494,7 +500,7 @@
             padding-bottom: 15px;
         }
     }
-    .promo-block.hover {
+    .sg-promo .col:last-child .promo-block {
         a {
             background-color: @color-black-dark2;
         }
@@ -505,30 +511,11 @@
 
 /* #region resonsive */
 
-@media screen and (max-width: @screen__s) {
-    .sg-buttons {
-        .action,
-        .qty-block {
-            display: block;
-        }
-    }
-    .sg-checkbox-radio .sg-radio {
-        display: block;
-    }
-}
 @media screen and (min-width: @screen__s) {
     .style-guide {
         .sg-promo {
-            .row {
-                flex-wrap: nowrap;
-            }
             .col {
-                &:first-child {
-                    padding-right: 10px;
-                }
-                &:last-child {
-                    padding-left: 10px;
-                }
+                width: 50%;
             }
         }
     }
@@ -547,11 +534,13 @@
             padding-left: 70px;
         }
     }
+    .sg-checkbox-radio .sg-radio {
+        display: block;
+    }
 }
 @media screen and (min-width: @screen__l) {
     .style-guide {
         &.row {
-            flex-wrap: nowrap;
             .col {
                 width: 50%;
                 &:first-child {
@@ -563,35 +552,23 @@
             }
         }
         .sg-promo {
-            .row {
-                flex-wrap: wrap;
-            }
             .col {
                 width: 100%;
-                &:first-child {
-                    padding-right: 15px;
-                }
-                &:last-child {
-                    padding-left: 15px;
-                }
-            }
-        }
-    }
-}
-@media screen and (min-width: @screen__xl) {
-    .style-guide {
-        .sg-promo {
-            .row {
-                flex-wrap: nowrap;
-            }
-            .col {
-                width: 50%;
                 &:first-child {
                     padding-right: 10px;
                 }
                 &:last-child {
                     padding-left: 10px;
                 }
+            }
+        }
+        .sg-radio {
+            display: inline-block;
+        }
+        .sg-buttons {
+            .action,
+            .qty-block {
+                display: inline-block;
             }
         }
     }
