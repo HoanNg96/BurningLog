@@ -1,9 +1,0 @@
-<p class="banner-img"><img src="{{media url="wysiwyg/footer/footer_bg_banner.png"}}" alt=""></p>
-<div class="banner-content">
-<h1 class="title">Exclusive outdoor furniture, online prices</h1>
-<p class="content">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-magna aliqua. <a href="#" class="web-link">Learn more</a>
-</p>
-<a href="#" class="web-link">Learn more</a>
-</div>

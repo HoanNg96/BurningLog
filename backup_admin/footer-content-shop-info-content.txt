@@ -1,4 +1,0 @@
-<p>{{widget type="Magento\Cms\Block\Widget\Page\Link" template="widget/link/link_block.phtml" page_id="5"}}</p>
-<p>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="All products" title="All products" template="category/widget/link/link_block.phtml" id_path="category/41"}}</p>
-<p><a href="#">Catalogues</a></p>
-<p><a href="#">Contact us</a></p>
