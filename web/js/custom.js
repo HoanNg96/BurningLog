@@ -1,9 +1,42 @@
 require(["jquery", "slick", "domReady!"], function ($) {
     $(".homepage-slider").slick({
-        infinite: true,
         speed: 2000,
         autoplay: true,
         arrows: false,
+    });
+});
+require(["jquery", "slick", "domReady!"], function ($) {
+    $(".reason-to-buy").slick({
+        speed: 2000,
+        autoplay: true,
+        arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    settings: "unslick"
+                }
+            }
+        ]
+    });
+});
+require(["jquery", "slick", "domReady!"], function ($) {
+    $(".best-seller .product-items").slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: true,
+                }
+            }
+        ]
     });
 });
 require(["jquery", "jquery-ui-modules/widget"], function ($) {

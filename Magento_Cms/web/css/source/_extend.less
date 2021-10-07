@@ -5,12 +5,14 @@
         padding-right: 0;
         max-width: 1600px;
     }
-    /* #endregion */
     .slide-item {
         position: relative;
         color: white;
         width: 100%;
         height: 100%;
+        .desktop-img {
+            display: none;
+        }
         img {
             width: 100%;
         }
@@ -28,65 +30,99 @@
         }
         .title {
             font-family: @font-marketot;
-            font-size: 170px;
+            font-size: 45px;
             font-weight: 400;
             margin: 0 auto;
-            max-width: 80%;
+            max-width: 90%;
             text-align: center;
         }
         .content {
             font-family: @font-lora;
-            font-size: 32px;
+            font-size: 20px;
             font-weight: 400;
             margin: 0 auto;
-            max-width: 60%;
+            max-width: 85%;
             text-align: center;
             margin-bottom: 2rem;
+            filter: drop-shadow(0 0 7.5px rgba(0,0,0,0.5));
+        }
+        .button-third {
+            font-size: 13px;
+            padding: 10px 35px 10px 20px;
         }
     }
+    /* #endregion */
+    
+    /* #region homepage-promo */
     .homepage-promo {
         margin-bottom: 10px;
         .promo-content {
             .title {
                 font-family: @font-lora;
-                font-size: 42px;
+                font-size: 24px;
                 font-weight: 700;
                 padding-bottom: 20px;
             }
+            .button-third {
+                font-size: 13px;
+                padding: 10px 35px 10px 20px;
+            }
         }
     }
+    /* #endregion */
+    
+    /* #region reason-to-buy */
     .reason-to-buy {
         background: #2d2d2f;
-        padding: 14px 0 4px;
         margin-bottom: 20px;
-        .col {
-            text-align: center;
+        .slick-list {
+            padding: 10px 0;
+        }
+        .slick-track {
+            display: flex;
+        }
+        .slick-slide {
+            padding: 0 10px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slick-slide span {
+            color: white;
+            font-size: 12px;
+            line-height: 14px;
             font-weight: 500;
-            border-right: 1px solid #47474b;
-            &:last-child {
-                border-right: none;
-            }
-            a {
-                color: white;
-                text-transform: uppercase;
-                &:after {
-                    content: "\f054";
-                    font-family: "Font Awesome 5 Pro";
-                    font-weight: 400;
-                    padding-left: 10px;
-                }
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            &:after {
+                content: "\f054";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 400;
+                right: 15px;
+                padding-left: 10px;
             }
         }
+        a {
+            display: inline-flex;
+        }
     }
+    /* #endregion */
+
+    /* #region banner-collection */
     .banner-collection {
         .col {
             img {
                 display: block;
+                width: 100%;
+                max-width: unset;
+                max-height: unset;
             }
         }
         .content {
-            background-color: #eeeeee;
             padding: 30px;
+            background-color: #eeeeee;
         }
         .title {
             font-size: 24px;
@@ -94,6 +130,7 @@
             font-weight: 400;
             line-height: 26px;
             color: #222222;
+            text-align: center;
         }
         .description {
             font-size: 14px;
@@ -127,4 +164,117 @@
             }
         }
     }
+    /* #endregion */
+
+    /* #region catalogues-video */
+    .catalogues-video {
+        .col {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region best-seller */
+    .best-seller {
+        display: none;
+        .home-product-title {
+            position: relative;
+            border-top: 1px solid ;
+            margin: 30px 0;
+        }
+        .title {
+            font-size: 22px;
+            color: #2d2d2d;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            padding: 0 20px;
+            background-color: white;
+        }
+        .block-title {
+            display: none;
+        }
+    }
+    /* #endregion */
+}
+
+//
+// Responsive
+//
+
+@media screen and (min-width: @screen__m) {
+    /* #region slider */
+    .slide-item {
+        .desktop-img {
+            display: block;
+        }
+        .mobile-img {
+            display: none;
+        }
+        .title {
+            font-size: 100px;
+        }
+    }
+    /* #endregion */
+
+    /* #region homepage-promo */
+    .homepage-promo {
+        .col {
+            width: 50%;
+        }
+        .promo-content {
+            .title {
+                font-family: @font-lora;
+                font-size: 24px;
+                font-weight: 700;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    /* #endregion */
+
+    /* #region reason-to-buy */
+    .reason-to-buy {
+        .slick-slide {
+            display: flex;
+        }
+    }
+    /* #endregion */
+
+    /* #region banner-collection */
+    .banner-collection {
+        margin-bottom: 10px;
+        .col {
+            width: 33.3333%;
+        }
+    }
+    /* #endregion */
+
+    /* #region catalogues-video */
+    .catalogues-video {
+        .col {
+            width: 50%;
+            &:first-child {
+                display: block;
+            }
+            .button-third {
+                padding: 10px 35px 10px 20px;
+                font-size: 13px;
+            }
+            .title {
+                font-size: 24px;
+                font-family: @font-lora;
+            }
+        }
+    }
+    /* #endregion */
 }
