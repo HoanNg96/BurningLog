@@ -178,7 +178,6 @@
 
     /* #region best-seller */
     .best-seller {
-        display: none;
         .home-product-title {
             position: relative;
             border-top: 1px solid ;
@@ -201,6 +200,21 @@
             background-color: white;
         }
         .block-title {
+            display: none;
+        }
+        .product-list-desktop {
+            display: none;
+        }
+        .product-item-name>a {
+            font-weight: 700;
+            color: #2d2d2d;
+        }
+        .product-item .price-box .price {
+            font-size: 20px;
+            color: #797979;
+            font-weight: 400;
+        }
+        .product-item-actions .actions-secondary {
             display: none;
         }
     }
@@ -274,6 +288,23 @@
                 font-size: 24px;
                 font-family: @font-lora;
             }
+        }
+    }
+    /* #endregion */
+
+    /* #region best-seller */
+    .best-seller {
+        .slick-slide {
+            margin: 0 5px;
+        }
+        .slick-list {
+            margin: 0 -5px;
+        }
+        .product-list-desktop {
+            display: block;
+        }
+        .product-list-mobile {
+            display: none;
         }
     }
     /* #endregion */

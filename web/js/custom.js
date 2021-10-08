@@ -4,12 +4,11 @@ require(["jquery", "slick", "domReady!"], function ($) {
         autoplay: true,
         arrows: false,
     });
-});
-require(["jquery", "slick", "domReady!"], function ($) {
     $(".reason-to-buy").slick({
         speed: 2000,
         autoplay: true,
         arrows: false,
+        swipeToSlide: true,
         mobileFirst: true,
         responsive: [
             {
@@ -21,13 +20,12 @@ require(["jquery", "slick", "domReady!"], function ($) {
             }
         ]
     });
-});
-require(["jquery", "slick", "domReady!"], function ($) {
-    $(".best-seller .product-items").slick({
+    $(".best-seller .product-list-desktop .product-items").slick({
         infinite: false,
         arrows: false,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
+        mobileFirst: true,
         swipeToSlide: true,
         responsive: [
             {
