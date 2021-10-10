@@ -1,0 +1,19 @@
+<div class="shop-store-info">
+    <div class="store-list">
+        <?php 
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('royalle_store_link')
+            ->toHtml();
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('sunbrella_store_link')
+            ->toHtml();
+        ?>
+    </div>
+    <?php echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('shipment_policy')
+        ->toHtml();
+    ?>
+</div>

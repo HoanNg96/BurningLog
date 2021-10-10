@@ -4,8 +4,8 @@
 & when (@media-common = true) {
     /* #region common */
     .page-main {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: @layout-indent__width;
+        padding-right: @layout-indent__width;
     }
     .clearfix::after {
         display: block;
@@ -14,24 +14,24 @@
     }
     .container {
         width: 100%;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: @layout-indent__width;
+        padding-left: @layout-indent__width;
         margin-right: auto;
         margin-left: auto;
     }
     .row {
         display: -ms-flexbox;
         display: flex;
-        margin-right: -10px;
-        margin-left: -10px;
+        margin-right: -@layout-indent__width;
+        margin-left: -@layout-indent__width;
         flex-wrap: wrap;
     }
     .col {
         position: relative;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: @layout-indent__width;
+        padding-left: @layout-indent__width;
         box-sizing: border-box;
-        margin-bottom: 10px;
+        margin-bottom: @layout-indent__width;
         width: 100%;
     }
     .style-guide-title {
@@ -122,16 +122,18 @@
             padding: 7px 50px;
         }
     }
-    input[type="number"].qty {
-        width: 40px;
+    .qty input[type="number"] {
+        width: 40px !important;
         text-align-last: center;
         display: inline-block;
         vertical-align: bottom;
+        font-size: @font-size__base;
     }
     span.ipn-step-up,
     span.ipn-step-down {
         cursor: pointer;
         display: inline-block;
+        font-size: @font-size__base;
         width: 38px;
         height: 38px;
         border: 1px solid @color-gray89;
@@ -151,14 +153,13 @@
     }
     span.ipn-step-up {
         border-left: none;
-        margin-left: -4px;
     }
     span.ipn-step-down {
         border-right: none;
-        margin-right: -4px;
     }
     .qty-block {
         display: inline-block;
+        font-size: 0;
     }
     .sg-buttons {
         .action.primary,
@@ -371,10 +372,11 @@
 
     /* #region navigation */
 
-    .sg-navigation {
-        .product.data.items {
-            margin-left: 0;
-            margin-right: 0;
+    .product.data.items {
+        margin-left: 0;
+        margin-right: 0;
+        .item.title > .switch {
+            text-transform: uppercase;
         }
         h3 {
             font-family: @font-roboto;
@@ -570,10 +572,10 @@
             .col {
                 width: 100%;
                 &:first-child {
-                    padding-right: 10px;
+                    padding-right: @layout-indent__width;
                 }
                 &:last-child {
-                    padding-left: 10px;
+                    padding-left: @layout-indent__width;
                 }
             }
         }

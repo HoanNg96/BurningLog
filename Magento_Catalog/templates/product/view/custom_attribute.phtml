@@ -1,0 +1,38 @@
+<?php
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_product = $block->getProduct();
+$_code = $block->getAtCode();
+$_className = $block->getCssClass();
+$_attributeLabel = $block->getAtLabel();
+$_attributeType = $block->getAtType();
+$_attributeAddAttribute = $block->getAddAttribute();
+if ($_attributeLabel && $_attributeLabel == 'default') {
+$_attributeLabel = $_product->getResource()->getAttribute($_code)->getFrontendLabel();
+}
+$_attributeValue =$_product->getResource()->getAttribute($_code)->getFrontend()->getValue($_product);
+?>
+<?php if ($_attributeValue): ?>
+<!-- if attribute is pre order -->
+<?php if ($_code == 'bl_pre_order'): ?>
+<!-- if value is yes -->
+<?php if ($_attributeValue == 'Yes'): ?><span class="pre-order-state">PRE ORDER</span><?php endif; ?>
+<!-- if attribute is other -->
+<?php else: ?>
+<div>
+<?php if ($_attributeLabel != 'none'): ?><strong class="custom_attr_name"><?php echo $_attributeLabel?></strong><?php endif; ?>
+<div class="custom_attr_value" <?php echo $_attributeAddAttribute;?>><?php echo $_attributeValue; ?></div>
+</div>
+<?php endif; ?>
+<?php endif; ?>
+
+<!-- 
+< ?php if (condition): ?>
+
+code to run if condition is true
+
+< ?php else: ?>
+
+code to run if condition is false
+
+< ?php endif ?>
+-->

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.social" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceContainer name="product.info.stock.sku" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.attributes" remove="true" />
+        <referenceBlock name="reviews.tab" remove="true" />
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.style" before="product.info.price" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getStyle</argument>
+                    <argument name="at_code" xsi:type="string">bl_style</argument>
+                    <argument name="css_class" xsi:type="string">bl-style</argument>
+                    <argument name="at_label" xsi:type="string">none</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="bl_style"</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.items" after="product.info.overview" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getItems</argument>
+                    <argument name="at_code" xsi:type="string">bl_items</argument>
+                    <argument name="css_class" xsi:type="string">bl-items</argument>
+                    <argument name="at_label" xsi:type="string">This product includes</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="bl_items"</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="shop.store.info" after="-" template="Magento_Catalog::product/view/shop-store-info.phtml" />
+            <referenceBlock name="product.info.description">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Description</argument>
+                </arguments>
+            </referenceBlock>
+            <referenceBlock name="product.info.details">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.warranty" as="product_warranty" after="product.info.description" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getWarranty</argument>
+                        <argument name="at_code" xsi:type="string">bl_warranty</argument>
+                        <argument name="css_class" xsi:type="string">bl-warranty</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Care &amp; Warranty</argument>
+                        <argument name="sort_order" xsi:type="string">20</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.shipping" as="product_shipping" after="product.info.warranty" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getShipping</argument>
+                        <argument name="at_code" xsi:type="string">bl_shipping</argument>
+                        <argument name="css_class" xsi:type="string">bl-shipping</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Shipping &amp; Delivery</argument>
+                        <argument name="sort_order" xsi:type="string">30</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.install" as="product_install" after="product.info.shipping" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getInstallRequirement</argument>
+                        <argument name="at_code" xsi:type="string">bl_install_require</argument>
+                        <argument name="css_class" xsi:type="string">bl-install-requirement</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Installation Requirements</argument>
+                        <argument name="sort_order" xsi:type="string">40</argument>
+                    </arguments>
+                </block>
+            </referenceBlock>
+        </referenceContainer>
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.preorder" after="-" template="Magento_Catalog::product/view/custom_attribute.phtml"  group="detailed_info" >
+                <arguments>
+                    <argument name="at_code" xsi:type="string">bl_pre_order</argument>
+                    <argument name="css_class" xsi:type="string">bl-pre-oder</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
