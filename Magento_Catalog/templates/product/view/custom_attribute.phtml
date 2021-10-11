@@ -18,7 +18,7 @@ $_attributeValue =$_product->getResource()->getAttribute($_code)->getFrontend()-
 <?php if ($_attributeValue == 'Yes'): ?><span class="pre-order-state">PRE ORDER</span><?php endif; ?>
 <!-- if attribute is other -->
 <?php else: ?>
-<div>
+<div <?php if ($_className): ?>class="<?= $_className ?>"<?php endif; ?>>
 <?php if ($_attributeLabel != 'none'): ?><strong class="custom_attr_name"><?php echo $_attributeLabel?></strong><?php endif; ?>
 <div class="custom_attr_value" <?php echo $_attributeAddAttribute;?>><?php echo $_attributeValue; ?></div>
 </div>
