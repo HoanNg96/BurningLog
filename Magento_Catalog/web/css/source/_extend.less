@@ -146,13 +146,16 @@
             padding-top: 20px;
             border-top: 1px solid #ddd;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            .image {
+                margin: 0 auto;
+            }
         }
         img {
             display: block;
-            width: 320px;
-            height: 220px;
-            max-height: unset;
-            max-width: unset;
+            width: 100%;
+            max-width: 320px;
+            height: 100%;
         }
         .content {
             display: flex;
@@ -160,7 +163,7 @@
             align-items: center;
             flex-direction: column;
             padding: 0 20px;
-            margin-left: 30px;
+            margin-top: 20px;
         }
         .title {
             font-family: @font-lora;
@@ -220,6 +223,20 @@
     }
     .product.data.items > .item.title > .switch {
         padding: 1px 20px;
+    }
+    .product.info.detailed {
+        .collection-block {
+            flex-wrap: nowrap;
+        }
+        .content {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+        img {
+            display: block;
+            width: 360px;
+            height: 220px;
+        }
     }
 }
 
